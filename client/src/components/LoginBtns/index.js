@@ -5,14 +5,21 @@ class LoginBtns extends Component {
     super(props);
     this.state = {
       signIn: false,
-      signUp: false,
+      register: false,
     };
-    // this.handleSavedBook = this.handleSavedBook.bind(this);
+    
+    this.handleSignInClick = this.handleSignInClick.bind(this);
+    this.handleRegisterClick = this.handleRegisterClick.bind(this);
   }
 
   handleSignInClick = event => {
-      alert("This button clicks!")
-    //   this.setState({signIn: true});
+    //   alert("This button clicks!")
+      this.setState({signIn: true});
+  }
+
+  handleRegisterClick = event => {
+    //   alert("Registration click works");
+      this.setState({register: true});
   }
 
   render() {
@@ -21,7 +28,7 @@ class LoginBtns extends Component {
             <div className="row">
                 <div className="col-12">
                     <button className="btn" onClick={this.handleSignInClick}>Sign In</button>
-                    <button className="btn">Register</button>
+                    <button className="btn" onClick={this.handleRegisterClick}>Register</button>
                 </div>
             </div>
         </div>
