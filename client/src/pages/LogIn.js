@@ -1,12 +1,13 @@
 import React, { Component } from "react";
+import Welcome from "../components/WelcomeSignIn";
 
 class LogIn extends Component {
   render() {
     return (
-      <div className= "container-flex">
+      <div className= "container-fluid">
         <div className="row">
           <div className="col-12">
-            
+            <Welcome />
           </div>
         </div>
       </div>
