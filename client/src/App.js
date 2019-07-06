@@ -3,15 +3,16 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Donations from "./pages/Donations";
 import LogIn from "./pages/LogIn";
+import About from "./pages/About";
 import Navbar from "./components/Navbar";
 import Jumbotron from "./components/Jumbotron";
-import About from "./pages/About";
+import Footer from "./components/Footer";
+import "./App.css";
 
 function App() {
   return (
-    // <div>Hello!!!</div>
     <Router>
-      <div>
+      <div className="pageContainer">
         <Navbar />
         <Jumbotron/>
         <Switch>
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/login" component={LogIn} />
           {/* <Route component={NoMatch} /> */}
         </Switch>
+        <Footer />
       </div>
     </Router>
   );
