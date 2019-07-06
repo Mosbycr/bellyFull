@@ -4,9 +4,8 @@ import Home from "./pages/Home";
 import Donations from "./pages/Donations";
 import LogIn from "./pages/LogIn";
 import About from "./pages/About";
-import Navbar from "./components/Navbar";
-import Jumbotron from "./components/Jumbotron";
-import Footer from "./components/Footer";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 import "./App.css";
 
 
@@ -15,7 +14,6 @@ function App() {
     <Router>
       <div className="pageContainer">
         <Navbar />
-        <Jumbotron/>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/home" component={Home} />
