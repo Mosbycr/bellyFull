@@ -1,9 +1,15 @@
-import React, { Component } from "react";
+import React from "react";
+import Mission from "../components/Mission/Mission";
+import Jumbotron from "../components/Jumbotron/Jumbotron";
 
-class Home extends Component {
-  render() {
-    return <div>Hello</div>;
-  }
+
+function Home() {
+  return (
+    <div>
+      <Jumbotron />
+      <Mission />
+    </div>
+  );
 }
 
 export default Home;
