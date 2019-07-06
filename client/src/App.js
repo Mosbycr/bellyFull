@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Navbar from "./components/Navbar";
 import Jumbotron from "./components/Jumbotron";
 import Footer from "./components/Footer";
+import "./App.css";
 
 function App() {
   return (

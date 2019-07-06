@@ -5,16 +5,20 @@ function Footer(){
       <div className="container-flex" id="footer">
         <div className="row">
           <div className="col-md-12 text-center">
-            <a href="#">
-              <i className="fab fa-github-square fa-2x" />
-            </a>
-            <a href="#">
-              <i className="fab fa-linkedin fa-2x" />
-            </a>
-            <a href="#">
-              <i className="fab fa-github-square fa-2x" />
-            </a>
-            <p className="copyright">copyright &copy 2019 BellyFull, Inc.</p>
+            <div className="icons">
+              <a href="#">
+                <i class="fab fa-facebook fa-3x" />
+              </a>
+              <a href="#">
+                <i className="fab fa-instagram fa-3x" />
+              </a>
+              <a href="#">
+                <i className="fab fa-github fa-3x" />
+              </a>
+            </div>
+            <p className="copyright">
+              copyright &copy; 2019 BellyFull, Inc.
+            </p>
           </div>
         </div>
       </div>
