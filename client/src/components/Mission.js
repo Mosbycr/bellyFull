@@ -6,7 +6,7 @@ function Mission() {
       <div class="col-sm-12">
     
           <p>
-            Here at BellyFull our vision is a simple one, help the Richmond
+            At BellyFull our vision is a simple one, help the Richmond
             community. As residents of a food desert we believe it is our
             responsibility to help those who may not have access to fresh food
             daily. By connection restauranteurs with non-profits in the area we
