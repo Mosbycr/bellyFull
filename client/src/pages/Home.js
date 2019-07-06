@@ -1,9 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
+import Mission from "../components/Mission";
 
-class Home extends Component {
-  render() {
-    return <div>Hello</div>;
-  }
+function Home() {
+  return (
+    <div>
+      <Mission></Mission>
+    </div>
+  )
 }
 
 export default Home;
