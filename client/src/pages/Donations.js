@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import DonationsCard from "../components/DonationsCard/DonationsCard";
+import DonationsCard from "../components/DonationsCard/DonationsCard";
 
 function Donations (){
   return(
@@ -7,6 +7,7 @@ function Donations (){
      <div className= "row">
        <div className="col-md-6 text-center">
          <h2>Available Donations</h2>
+         <DonationsCard/>
        </div>
        <div className = "col-md-6 text-center">
          <h2>Claimed</h2>
