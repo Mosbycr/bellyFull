@@ -24,13 +24,9 @@ class LoginBtns extends Component {
 
   render() {
     return (
-        <div className="container-fluid text-center">
-            <div className="row">
-                <div className="col-12">
+        <div className="btnContainer text-center">
                     <button className="btn" onClick={this.handleSignInClick}>Sign In</button>
                     <button className="btn" onClick={this.handleRegisterClick}>Register</button>
-                </div>
-            </div>
         </div>
     )
   }
