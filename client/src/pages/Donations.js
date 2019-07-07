@@ -7,6 +7,7 @@ function Donations (){
      <div className= "row">
        <div className="col-md-6 text-center">
          <h2>Available Donations</h2>
+         <br></br>
          <DonationsCard/>
        </div>
        <div className = "col-md-6 text-center">
