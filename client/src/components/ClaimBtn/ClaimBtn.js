@@ -21,13 +21,4 @@ class ClaimBtn extends Component{
 }
 
 
-
-// function ClaimBtn(props) {
-//   return (
-//     <button onClick={props.onClick} className={`card-btn ${props["data-value"]}`} {...props}>
-//         Claim
-//     </button>
-//   );
-// }
-
 export default ClaimBtn;
