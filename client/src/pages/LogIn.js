@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Welcome from "../components/WelcomeSignIn";
 import LoginBtns from "../components/LoginBtns";
-import Form from "../components/loginForm";
+import LogInForm from "../components/loginForm";
 
 class LogIn extends Component {
   render() {
@@ -19,7 +19,7 @@ class LogIn extends Component {
         </div>
         <div className="row">
           <div className="col-12">
-            <Form />
+            <LogInForm />
           </div>
         </div>
       </div>
