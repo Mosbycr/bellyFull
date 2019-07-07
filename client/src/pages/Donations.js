@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import DonationsCard from "../components/DonationsCard/DonationsCard";
+import ClaimedCard from "../components/ClaimedCard/ClaimedCard";
 
 function Donations (){
   return(
@@ -12,6 +13,8 @@ function Donations (){
        </div>
        <div className = "col-md-6 text-center">
          <h2>Claimed</h2>
+         <br></br>
+         <ClaimedCard/>
        </div>
     </div>
     </div>
