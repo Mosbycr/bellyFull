@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import ClaimBtn from "../ClaimBtn/ClaimBtn";
 
 function DonationsCard(){
     return(
@@ -12,8 +13,8 @@ function DonationsCard(){
             <li className="list-group-item">Contact info</li>
        </ul>
             <div className="card-body">
-                <a href="#" className="btn btn-primary">Claim</a>
-         </div>
+              <ClaimBtn/>        
+            </div>
    </div>
     );
 }
