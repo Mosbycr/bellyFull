@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import LogInForm from "../loginForm";
 
 class LoginBtns extends Component {
   constructor(props) {
@@ -13,22 +14,32 @@ class LoginBtns extends Component {
   }
 
   handleSignInClick = event => {
-    //   alert("This button clicks!")
-      this.setState({signIn: true});
+      this.setState({signIn: true, register: false});
   }
 
   handleRegisterClick = event => {
-    //   alert("Registration click works");
-      this.setState({register: true});
+      this.setState({register: true, signIn: false});
   }
 
   render() {
     return (
+      <div>
         <div className="btnContainer text-center">
-                    <button className="btn" onClick={this.handleSignInClick}>Sign In</button>
-                    <button className="btn" onClick={this.handleRegisterClick}>Register</button>
+          <button className="btn" onClick={this.handleSignInClick}>
+            Sign In
+          </button>
+          <button className="btn" onClick={this.handleRegisterClick}>
+            Register
+          </button>
         </div>
-    )
+        <div className="LoginForms">
+          <LogInForm
+            signIn={this.state.signIn}
+            register={this.state.register}
+          />
+        </div>
+      </div>
+    );
   }
 }
 
