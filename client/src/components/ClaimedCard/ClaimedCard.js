@@ -7,11 +7,10 @@ function ClaimedCard(){
          <div className="card-header">
              <h5 className="card-title">Contact Info</h5>
          </div>
-            <div className="card-body">
-                <div class="card-body">
-                    <p class="card-text">Restaurant info goes here</p>
-                </div>
-            </div>
+             <ul class="list-group list-group-flush">
+                 <li class="list-group-item">Item Claimed</li>
+                 <li class="list-group-item">Restaurant info goes here</li>
+             </ul>
     </div>
     );
 }
