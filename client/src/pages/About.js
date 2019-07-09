@@ -24,6 +24,9 @@ function About (){
                 <div className= "row">
                     <h3>Our Vission...</h3>
                 </div>
+                <div className="row">
+                    <p>We seek a world of hope, tolerance and social justice, where poverty has been overcome and all people live with dignity and security.</p>
+                </div>
             </div>
             
 
