@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import DonationsCard from "../components/DonationsCard/DonationsCard";
 import ClaimedCard from "../components/ClaimedCard/ClaimedCard";
 
