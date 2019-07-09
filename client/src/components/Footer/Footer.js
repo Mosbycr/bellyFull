@@ -3,12 +3,12 @@ import "./Footer.css";
 
 function Footer(){
     return (
-      <div className="container-flex" id="footer">
+      <div className="container-fluid" id="footer">
         <div className="row">
           <div className="col-md-12 text-center">
             <div className="icons">
               <a href="#">
-                <i class="fab fa-facebook fa-3x pr-5" />
+                <i className="fab fa-facebook fa-3x pr-5" />
               </a>
               <a href="#">
                 <i className="fab fa-instagram fa-3x" />
@@ -26,4 +26,4 @@ function Footer(){
     );
 }
 
-export default Footer
+export default Footer;
