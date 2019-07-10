@@ -7,9 +7,14 @@ html, body, #root {
     margin: 0;
     height: 100%;
     width: 100%;
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Merienda', cursive;
     color: rgb(14 59 67);
     background-color: rgb(208 207 207);
+}
+
+.btn{
+    background-color: rgb(185 49 79);
+    color: rgb(208 207 207);
 }
 
 .pageContainer {
@@ -18,3 +23,11 @@ html, body, #root {
 
 }
 
+/* About Us Page */
+.about{
+    margin: 30px;
+}
+
+.aboutUs{
+    font-weight: bold;
+}
