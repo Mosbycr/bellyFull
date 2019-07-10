@@ -12,3 +12,8 @@ label {
 button {
     display: block;
 }
+
+span {
+    display: block;
+    color: #b9314f;
+}
