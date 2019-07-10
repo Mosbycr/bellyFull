@@ -10,13 +10,21 @@
     color: #d0cfcf;
 }
 
-a {
+.icons > a {
     color: inherit;
 }
 
-a:hover {
-    color: #b9314f;
+.icons > a:hover {
+   color: #b9314f; 
 }
+
+/* a {
+    color: inherit;
+} */
+
+/* a:hover {
+    color: #b9314f;
+} */
 
 .copyright {
     padding-top: 10px;
