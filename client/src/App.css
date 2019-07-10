@@ -31,3 +31,7 @@ html, body, #root {
 .aboutUs{
     font-weight: bold;
 }
+
+.joinUs{
+    font-size: 12px;
+}

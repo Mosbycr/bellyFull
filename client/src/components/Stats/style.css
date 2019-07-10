@@ -1,4 +1,39 @@
 .stats{
     margin: 60px;
     max-width: 600px;
+    box-shadow: 10px 10px 5px grey;
+    border-radius: 15px 50px;
+}
+
+.VAStats{
+    font-weight: bold;
+    color: rgb(185 49 79);
+
+}
+
+.moneyNeeded{
+    font-weight: bold;
+    font-size: 36px;
+    color: rgb(185 49 79);
+}
+
+.firstIcon{
+    color: rgb(185 49 79);
+}
+
+.hunger{
+    font-weight: bold;
+}
+
+.vl{
+    border-left: 3px solid rgb(37 89 87);
+    height: 100px;
+}
+
+hr{
+    border: 2px solid rgb(37 89 87);
+    margin-top: 0px;
+}
+.joinUs{
+    margin-left: 500px;
 }

@@ -4,8 +4,8 @@ function Stats(){
     return(
         <div className= "jumbotron stats">
             <div className = "container">
-            <div className= "row justify-content-md-center">
-                In Virginia, 863,390 people are struggling with hunger - and of them 247,470 are children.
+            <div className= "row">
+                <p>In Virginia, <span className = "VAStats">863,390</span> people are struggling with hunger - and of them <span className = "VAStats">247,470</span> are children.</p>
             </div>
             <div className= "row ">
                 <div className= "col">
@@ -13,7 +13,7 @@ function Stats(){
                         1 in 10 people
                     </div>
                     <div className= "row justify-content-md-center">
-                        <i class="fas fa-male"></i><i class="fas fa-male"></i><i class="fas fa-male"></i><i class="fas fa-male"></i><i class="fas fa-male"></i>
+                        <i class="fas fa-male firstIcon"></i><i class="fas fa-male"></i><i class="fas fa-male"></i><i class="fas fa-male"></i><i class="fas fa-male"></i>
                     </div>
                     <div className= "row justify-content-md-center">
                         <i class = "fas fa-male"></i><i class="fas fa-male"></i><i class="fas fa-male"></i><i class="fas fa-male"></i><i class="fas fa-male"></i>
@@ -22,6 +22,7 @@ function Stats(){
                         struggles with hunger.
                     </div>
                 </div>
+                <div className= "vl"></div>
                 <div className = "col">
                     <div className= "row justify-content-md-center">
                        1 in 8 
@@ -34,7 +35,7 @@ function Stats(){
                     </div>
                 </div>
             </div>
-            <br></br><br></br>
+            <hr></hr>
             <div className= "row justify-content-md-center">
                 People facing hunger in
             </div>
@@ -44,14 +45,14 @@ function Stats(){
             <div className= "row justify-content-md-center">
                 are estimated to report needing
             </div>
-            <div className = "row justify-content-md-center">
+            <div className = "row justify-content-md-center moneyNeeded">
                 $446,691,000
             </div>
             <div className = "row justify-content-md-center">
                 more per year to meet their food needs.
             </div>
             <div className= "row justify-content-md-center">
-            The average cost of a meal in Virginia is $3.03. Data from Feeding America's Map the Meal Gap 2017 study.
+            <p>The average cost of a meal in Virginia is $3.03. Data from Feeding America's Map the Meal Gap 2017 study.</p>
             </div>
             </div>
            
