@@ -15,6 +15,8 @@ function LogInForm(props){
         email: Yup.string().email("Please enter a valid email")
         .required("Please enter a valid email"),
         password: Yup.string()
+        // .min(8, "Please enter a password of 8 characters or more")
+        .matches(/^[a-zA-Z]\w{3,14}$/g, "Password must start with a letter, only letters, numbers, and underscore may be used, and must be between 4 and 15 characters in length")
         .required("Please enter a password"),
         organization: Yup.string()
         .required("Organization name is required"),
