@@ -7,6 +7,9 @@ html, body, #root {
     margin: 0;
     height: 100%;
     width: 100%;
+    font-family: 'Source Serif Pro', serif;
+    color: rgb(14 59 67);
+    background-color: rgb(208 207 207);
 }
 
 .pageContainer {
