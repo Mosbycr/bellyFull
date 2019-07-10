@@ -3,8 +3,9 @@ import Stats from "../components/Stats/Stats";
 
 function About() {
   return (
-    <div className="container-fluid about">
-      <div className="row justify-content-center">
+    <div className="container-fluid">
+        <div className= "about">
+        <div className="row justify-content-center">
         <h1 className="aboutUs  mb-5 ">About Us</h1>
       </div>
       <div className="row">
@@ -68,6 +69,8 @@ function About() {
           </div>
         </div>
       </div>
+        </div>
+      
     </div>
   );
 }
