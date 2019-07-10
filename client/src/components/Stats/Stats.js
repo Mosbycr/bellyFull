@@ -2,12 +2,12 @@ import React from "react";
 import "./style.css"
 function Stats(){
     return(
-    
+        <div className= "jumbotron stats">
             <div className = "container">
             <div className= "row justify-content-md-center">
                 In Virginia, 863,390 people are struggling with hunger - and of them 247,470 are children.
             </div>
-            <div className= "row">
+            <div className= "row ">
                 <div className= "col">
                     <div className= "row justify-content-md-center">
                         1 in 10 people
@@ -53,13 +53,9 @@ function Stats(){
             <div className= "row justify-content-md-center">
             The average cost of a meal in Virginia is $3.03. Data from Feeding America's Map the Meal Gap 2017 study.
             </div>
-
             </div>
            
-
-        
-
+        </div>
     );
 }
-
 export default Stats;
