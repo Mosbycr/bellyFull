@@ -12,19 +12,26 @@ function LogInForm(props){
     }
 
     const schema = Yup.object().shape({
-        email: Yup.string().email("Please enter a valid email")
+      email: Yup.string()
+        .email("Please enter a valid email")
         .required("Please enter a valid email"),
-        password: Yup.string()
-        // .min(8, "Please enter a password of 8 characters or more")
-        .matches(/^[a-zA-Z]\w{3,14}$/g, "Password must start with a letter , must be between 4 and 15 characters in length, and only letters, numbers, and underscores may be used")
+      password: Yup.string()
+        .matches(
+          /^[a-zA-Z]\w{3,14}$/g,
+          "Password must start with a letter , must be between 4 and 15 characters in length, and only letters, numbers, and underscores may be used"
+        )
         .required("Please enter a password"),
-        organization: Yup.string()
-        .required("Organization name is required"),
-        contactFirst: Yup.string()
-        .required("Contact First Name is required"),
-        contactLast: Yup.string()
-        .required("Contact Last Name is required"),
-    })
+      organization: Yup.string().required("Organization name is required"),
+      contactFirst: Yup.string().required("Contact First Name is required"),
+      contactLast: Yup.string().required("Contact Last Name is required"),
+      phone: Yup.string()
+        .matches(
+          /^(?:\([2-9]\d{2}\)\ ?|[2-9]\d{2}(?:\-?|\ ?))[2-9]\d{2}[- ]?\d{4}$/g,
+          "Please enter a valid phone number"
+        )
+        .required("Please enter a valid phone number")
+      
+    });
 
     if(props.signIn === true){
         return (
@@ -70,12 +77,13 @@ function LogInForm(props){
                 placeholder="804-229-6345"
               />
               <Input
+              multiline
                 name="streetNumber"
                 type="text"
                 label="Address"
                 placeholder="14233"
               />
-              <Input
+              {/* <Input
                 name="streetName"
                 type="text"
                 placeholder="Ocean Lane"
@@ -84,7 +92,7 @@ function LogInForm(props){
               <Input name="city" type="text" placeholder="Tuckahoe" />
               <Input name="state" type="text" placeholder="VA" />
               <br />
-              <Input name="zipcode" type="text" placeholder="23542" />
+              <Input name="zipcode" type="text" placeholder="23542" /> */}
               <p>*All fields are required</p>
               <button type="submit">Register</button>
             </Form>
