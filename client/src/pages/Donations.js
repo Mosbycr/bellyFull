@@ -30,41 +30,10 @@ class Donations extends Component {
     .catch(err => console.log(err));
   };
 
-  // render() {
-  //   return(
-  //     <Container fluid>
-  //     <Row>
-  //       <Col size="md-6">
-  //     <Jumbotron>
-  //             <h1>Books On My List</h1>
-  //           </Jumbotron>
-  //           {this.state.food.length ? (
-  //             <List>
-  //               {this.state.food.map(food => (
-  //                 <ListItem key={food._id}>
-  //                   <Link to={"/food/" + food._id}>
-  //                     <strong>
-  //                       {food.restaurant} by {food.phone}
-  //                     </strong>
-  //                     </Link>
-  //                 </ListItem>
-  //               ))}
-  //             </List>
-  //           ) : (
-  //             <h3>No Results to Display</h3>
-  //           )}
-  //         </Col>
-  //       </Row>
-  //     </Container>
-  //      );
-  //     }
-  //   }
-      
-  //  export default Donations;
-  //function Donations (){
+  
 render() {
   return(
-    
+
     <div className= "container-fluid">
      <div className= "row">
        <div className="col-md-6 text-center">
@@ -76,17 +45,21 @@ render() {
     {this.state.food.map(food => (
       <ListItem key={food._id}>
         <Link to={"/food/" + food._id}>
-          <strong>
-            {food.restaurant} by {food.phone}
-          </strong>
+          {/* <strong>
+            {food.restaurant} <br /> {food.phone}
+          </strong> */}
           </Link>
+          <DonationsCard 
+          restaurant={food.restaurant} 
+          contact={food.phone}
+          listItems={food.donations}
+          />
       </ListItem>
     ))}
   </List>
 ) : (
   <h3>No Results to Display</h3>
 )}
-         <DonationsCard/>
        </div>
        <div className = "col-md-6 text-center">
          <h2>Claimed</h2>
@@ -96,6 +69,7 @@ render() {
        </div>
     </div>
     </div>
+
   )
 }
 }
