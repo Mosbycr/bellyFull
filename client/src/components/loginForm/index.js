@@ -26,11 +26,22 @@ function LogInForm(props){
       contactLast: Yup.string().required("Contact Last Name is required"),
       phone: Yup.string()
         .matches(
-          /^(?:\([2-9]\d{2}\)\ ?|[2-9]\d{2}(?:\-?|\ ?))[2-9]\d{2}[- ]?\d{4}$/g,
+          /^([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$/g,
           "Please enter a valid phone number"
         )
-        .required("Please enter a valid phone number")
-      
+        .required("Please enter a valid phone number"),
+      streetAddress: Yup.string()
+        .matches(
+          /^\d{1,3}.?\d{0,3}\s[a-zA-Z]{2,30}\s[a-zA-Z]{2,15}/g,
+          "Please enter a valid street address"
+        )
+        .required("Please enter a valid street address"),
+      cityStateZip: Yup.string()
+        .matches(
+          /^[A-Za-z . ,'-]+\d{5}(-\d{4})?$/g,
+          "Please enter a valid street address"
+        )
+        .required("Please enter a valid street address")
     });
 
     if(props.signIn === true){
@@ -76,13 +87,17 @@ function LogInForm(props){
                 label="Phone Number"
                 placeholder="804-229-6345"
               />
-              <Input
-              multiline
-                name="streetNumber"
-                type="text"
-                label="Address"
-                placeholder="14233"
-              />
+                <Input
+                  name="streetAddress"
+                  type="text"
+                  label="Address"
+                  placeholder="14233 Wonder Drive"
+                />
+                <Input
+                  name="cityStateZip"
+                  type="text"
+                  placeholder="Henrico VA, 23229"
+                />
               {/* <Input
                 name="streetName"
                 type="text"
