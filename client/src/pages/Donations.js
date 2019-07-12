@@ -27,6 +27,10 @@ class Donations extends Component {
     .catch(err => console.log(err));
   };
 
+  handleClaimClick = event =>{
+       alert("Btn was clicked!!")
+   }
+
   
 render() {
   return(
@@ -51,6 +55,7 @@ render() {
           contact={food.phone}
           listItems={food.donations}
           claimed={food.claimed}
+          handleClaimClick={this.handleClaimClick}
           />
       </ListItem>
     ))}

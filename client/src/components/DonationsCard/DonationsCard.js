@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-//import ClaimBtn from "../ClaimBtn/ClaimBtn";
+// import ClaimBtn from "../ClaimBtn/ClaimBtn";
 
 
 function DonationsCard(props){
@@ -17,7 +17,7 @@ function DonationsCard(props){
             <li className="list-group-item">{props.contact}</li>
        </ul>
             <div className="card-body">
-              <button>Claimed</button>       
+              <button className = "btn btn-primary " onClick ={props.handleClaimClick}>Claim</button>     
             </div>
    </div>
     );
