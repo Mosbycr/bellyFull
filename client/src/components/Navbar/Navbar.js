@@ -3,8 +3,8 @@ import "./Navbar.css";
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-      <ul className="navList">
+    <nav className="navbar">
+      <ul>
         <li>
       <a className="navbar-brand" href="/">
         Home  | 
