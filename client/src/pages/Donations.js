@@ -12,10 +12,7 @@ import { Link } from "react-router-dom";
 
 class Donations extends Component {
   state = {
-    food: [],
-    restaurant: "",
-    phone: "",
-    donations: ""
+    food: []
   };
 
   componentDidMount() {
@@ -25,7 +22,7 @@ class Donations extends Component {
   loadFood = () => {
     API.getFood()
     .then(res => 
-      this.setState({ food: res.data, restaurant: "", phone: "", donations: ""})
+      this.setState({ food: res.data})
     )
     .catch(err => console.log(err));
   };
@@ -53,6 +50,7 @@ render() {
           restaurant={food.restaurant} 
           contact={food.phone}
           listItems={food.donations}
+          claimed={food.claimed}
           />
       </ListItem>
     ))}
