@@ -11,12 +11,12 @@
     margin-top: 20px;
 }
 
-a {
+.icons > a {
     color: inherit;
 }
 
-a:hover {
-    color: #b9314f;
+.icons > a:hover {
+   color: #b9314f; 
 }
 
 .copyright {

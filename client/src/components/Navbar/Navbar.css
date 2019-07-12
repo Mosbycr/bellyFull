@@ -27,14 +27,14 @@ li {
 }
 
 
-a:link, a:visited {
+.navList > li > a:link, a:visited {
     /* display: block; */
-    width: 120px;
+    /* width: 120px; */
     font-weight: bold;
-    text-align: center;
+    /* text-align: center; */
     padding: 4px;
     text-decoration: none;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 
