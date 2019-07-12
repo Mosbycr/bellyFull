@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import DonationsCard from "../components/DonationsCard/DonationsCard";
 import ClaimedCard from "../components/ClaimedCard/ClaimedCard";
 import API from "../utils/API";
