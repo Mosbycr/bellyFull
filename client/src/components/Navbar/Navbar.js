@@ -4,7 +4,7 @@ import "./Navbar.css";
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-      <ul>
+      <ul className="navList">
         <li>
       <a className="navbar-brand" href="/">
         Home  | 

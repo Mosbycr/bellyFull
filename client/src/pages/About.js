@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
+import Stats from "../components/Stats/Stats";
 
 function About (){
     return(
         <div className="container-fluid">
-            <div className= "jumbotron">
                 <div className= "row">
                     <h1>About Us</h1>
                 </div>
@@ -12,7 +12,6 @@ function About (){
                 </div>
                 <div className= "row">
                     <p>Belly Full was founded in Richmond, VA by Carrie Mosby, Nimeh Jadallah, and Molly Levine in 2019.</p>
-                    <p> The US is facing a food waste crisis. Up to 40% of all food goes to waste across the country, and restaurants alone throw away 133 billion pounds of food each year. This has a serious impact on small business, food insecurity, and is a major contributing force to climate change.</p>
                 </div>
                 
                 <div className= "row">
@@ -25,13 +24,19 @@ function About (){
                     <h3>Our Vission...</h3>
                 </div>
                 <div className="row">
+                    <p> The US is facing a food waste crisis. Up to 40% of all food goes to waste across the country, and restaurants alone throw away 133 billion pounds of food each year. This has a serious impact on small business, food insecurity, and is a major contributing force to climate change.</p>
                     <p>We seek a world of hope, tolerance and social justice, where poverty has been overcome and all people live with dignity and security.</p>
                 </div>
-            </div>
+                <div className = "row">
+                    <Stats/>  
+                </div> 
+                
+        </div>
+        
             
 
 
-        </div>
+    
 
     );
 }

@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css"
 function Stats(){
     return(
-        <div className= "jumbotron">
+    
             <div className = "container">
             <div className= "row justify-content-md-center">
                 In Virginia, 863,390 people are struggling with hunger - and of them 247,470 are children.
@@ -57,7 +57,7 @@ function Stats(){
             </div>
            
 
-        </div>
+        
 
     );
 }

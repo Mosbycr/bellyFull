@@ -13,6 +13,7 @@ function Mission() {
             hope to reduce food waste as well as provide food to those who are
             food insecure.
           </p>
+          <a href= "/LogIn" className = "btn btn-primary ">Get Started</a>
         
       </div>
     </div>
