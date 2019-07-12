@@ -11,7 +11,7 @@ const foodSeed = [
     phone: "(804) 353-0111",
     donations: "corn on the cob, ribs (uncooked), ground beef(uncooked), cranberry sauce",
     date: new Date(Date.now()),
-    claimed: false
+    claimed: true
   },
   {
     restaurant: "Joes Inn",
