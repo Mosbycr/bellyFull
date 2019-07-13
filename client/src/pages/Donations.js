@@ -3,8 +3,6 @@ import DonationsCard from "../components/DonationsCard/DonationsCard";
 import ClaimedCard from "../components/ClaimedCard/ClaimedCard";
 import API from "../utils/API";
 import List from "../components/List"
-//import { Container, Row, Col} from "../components/Container/container";
-//import Jumbotron from "../components/Jumbotron/Jumbotron";
 import ListItem from "../components/List";
 import { Link } from "react-router-dom";
 
@@ -31,8 +29,6 @@ class Donations extends Component {
        alert("Btn was clicked!!")
    }
 
-
-  
 render() {
 
   return (
@@ -62,7 +58,7 @@ render() {
               ))}
             </List>
           ) : (
-            <h3>No Results to Display</h3>
+            <div></div>
           )}
         </div>
         <div className="col-md-6 text-center">
@@ -89,9 +85,8 @@ render() {
               ))}
             </List>
           ) : (
-            <h3>No Results to Display</h3>
+           <div></div>
           )}
-          {/* <DonationsCard /> */}
         </div>
       </div>
     </div>
