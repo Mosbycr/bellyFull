@@ -11,7 +11,7 @@ function ClaimedCard(props) {
         <ul className="list-group list-group-flush">
           <li className="list-group-item">{props.restaurant}</li>
           <li className="list-group-item">{props.contact}</li>
-          <li className="list-group-item">Items Claimed: {props.listItems}</li>
+          <li className="list-group-item">Items Claimed: <br/> {props.listItems}</li>
         </ul>
       </div>
     );
