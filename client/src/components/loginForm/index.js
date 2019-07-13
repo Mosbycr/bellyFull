@@ -98,16 +98,6 @@ function LogInForm(props){
                   type="text"
                   placeholder="Henrico VA, 23229"
                 />
-              {/* <Input
-                name="streetName"
-                type="text"
-                placeholder="Ocean Lane"
-              />
-              <br />
-              <Input name="city" type="text" placeholder="Tuckahoe" />
-              <Input name="state" type="text" placeholder="VA" />
-              <br />
-              <Input name="zipcode" type="text" placeholder="23542" /> */}
               <p>*All fields are required</p>
               <button type="submit">Register</button>
             </Form>

@@ -13,12 +13,5 @@ export default {
   updateFoodById: function(id, food) {
     return axios.put("/api/food/" + id, food);
   }
-  // Deletes the book with the given id
-  // deleteFood: function(id) {
-  //   return axios.delete("/api/food/" + id);
-  // },
-  // // Saves a book to the database
-  // saveFood: function(bookData) {
-  //   return axios.post("/api/food", bookData);
-  // }
+
 };
