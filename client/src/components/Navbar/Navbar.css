@@ -1,3 +1,12 @@
+nav{
+background-color: rgb(67 124 144);
+color: rgb(208 207 207);
+border-bottom: 4px solid #0e3b43;
+
+
+
+
+}
 ul {
     list-style: none;
     padding: 0;
@@ -9,6 +18,7 @@ ul {
 li {
     float: left;
     position: relative;
+    
 }
 
 .divider {
@@ -26,6 +36,8 @@ li {
     padding: 4px;
     text-decoration: none;
     /* text-transform: uppercase; */
+    color: rgb(208 207 207);
+
 }
 
 

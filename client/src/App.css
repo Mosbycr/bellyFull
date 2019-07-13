@@ -7,11 +7,39 @@ html, body, #root {
     margin: 0;
     height: 100%;
     width: 100%;
+    font-family: 'Cuprum', sans-serif;
+    color: rgb(14 59 67);
+    background-color: rgb(208 207 207);
+}
+
+.btn{
+    background-color: rgb(185 49 79);
+    color: rgb(208 207 207);
 }
 
 .pageContainer {
     position: relative;
     min-height: 100vh;
+    padding-bottom: 60px;
 
 }
 
+/* About Us Page */
+.about{
+    margin: 50px;
+}
+
+.aboutUs{
+    font-weight: bold;
+    font-family: 'Merienda', cursive;
+
+}
+
+.joinUs{
+    font-size: 12px;
+}
+
+h3{
+    font-family: 'Merienda', cursive;
+
+}
