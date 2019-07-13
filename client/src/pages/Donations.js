@@ -101,6 +101,3 @@ render() {
 }
 }
 export default Donations;
-
-
-
