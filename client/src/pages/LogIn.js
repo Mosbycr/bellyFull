@@ -7,6 +7,7 @@ class LogIn extends Component {
   render() {
     return (
       <div className= "container-fluid">
+        <div className= "logIn">
         <div className="row">
           <div className="col-12">
             <Welcome />
@@ -17,6 +18,9 @@ class LogIn extends Component {
             <LoginBtns />
           </div>
         </div>
+
+        </div>
+        
       </div>
     )
   }
