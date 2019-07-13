@@ -9,6 +9,10 @@ export default {
   getFoodById: function(id) {
     return axios.get("/api/food/" + id);
   },
+
+  updateFoodById: function(id, food) {
+    return axios.put("/api/food/" + id, food);
+  }
   // Deletes the book with the given id
   // deleteFood: function(id) {
   //   return axios.delete("/api/food/" + id);

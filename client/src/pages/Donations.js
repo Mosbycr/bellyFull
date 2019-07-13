@@ -25,12 +25,19 @@ class Donations extends Component {
     .catch(err => console.log(err));
   };
 
-  handleClaimClick = event =>{
-       alert("Btn was clicked!!")
+
+  
+  handleClaimClick = food =>{
+    food.claimed = true;
+    API.updateFoodById(food._id, food)
+      .then(
+        this.loadFood()
+      )
+      .catch(err => console.log(err));
    }
 
 render() {
-
+  console.log(this.state.food);
   return (
     <div className="container-fluid">
       <div className="row">
@@ -52,7 +59,8 @@ render() {
                     contact={food.phone}
                     listItems={food.donations}
                     claimed={food.claimed}
-                    handleClaimClick={this.handleClaimClick}
+                    handleClaimClick={() => this.handleClaimClick(food)}
+                    key={food._id}
                   />
                 </ListItem>
               ))}
@@ -79,7 +87,6 @@ render() {
                     contact={food.phone}
                     listItems={food.donations}
                     claimed={food.claimed}
-                    handleClaimClick={this.handleClaimClick}
                   />
                 </ListItem>
               ))}
