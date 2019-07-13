@@ -5,11 +5,9 @@ function Stats() {
     <div className="jumbotron stats">
       <div className="container">
         <div className="row">
-          <p>
-            In Virginia, <span className="VAStats">863,390</span> people are
-            struggling with hunger - and of them{" "}
-            <span className="VAStats">247,470</span> are children.
-          </p>
+          In Virginia, <span className="VAStats">863,390</span>people are
+          struggling with hunger - and of them {" "}
+          <span className="VAStats">247,470</span>are children.
         </div>
         <div className="row ">
           <div className="col">
@@ -64,9 +62,8 @@ function Stats() {
           $446,691,000
         </div>
         <div className="row">
-          more per year to meet their food needs. The average cost of a meal in
-          Virginia is $3.03. Data from Feeding America's Map the Meal Gap 2017
-          study.
+          <p>more per year to meet their food needs. The average cost of a meal in
+          Virginia is $3.03. Data from Feeding America's <a className= "study" href= "https://map.feedingamerica.org/">Map the Meal Gap 2017 </a>study.</p> 
         </div>
       </div>
     </div>
