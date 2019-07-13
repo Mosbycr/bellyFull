@@ -36,6 +36,13 @@ hr{
     border: 2px solid rgb(37 89 87);
     margin-top: 0px;
 }
+
+.study{
+    /* font-weight: bold; */
+    color: rgb(185 49 79);
+}
+
 .joinUs{
     margin-left: 500px;
 }
+
