@@ -98,6 +98,13 @@ function LogInForm(props){
                   type="text"
                   placeholder="Henrico VA, 23229"
                 />
+                 <Input
+                name="email"
+                type="email"
+                label="Email"
+                placeholder="sammyGives@gmail.com"
+              />
+              <Input name="password" type="password" label="Password" />
               <p>*All fields are required</p>
               <button type="submit">Register</button>
             </Form>
