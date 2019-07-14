@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Welcome from "../components/WelcomeSignIn";
 import LoginBtns from "../components/LoginBtns";
 import LogInForm from "../components/loginForm";
+import API from "../utils/API";
 
 
 class LogIn extends Component {
@@ -28,8 +29,8 @@ class LogIn extends Component {
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleOrganizationFormSubmit = this.handleOrganizationFormSubmit.bind(
       this);
-    this.handleCreateText = this.handleCreateText.bind(this);
-  }
+    // this.handleCreateText = this.handleCreateText.bind(this);
+  };
 
   handleSignInClick = event => {
     this.setState({ signIn: true, register: false });
@@ -48,17 +49,31 @@ class LogIn extends Component {
 
   handleOrganizationFormSubmit = event => {
     event.preventDefault();
-    // alert("submitted");
+    alert("submitted");
+    this.setState({ isShow: true });
+    // if (this.state.organization) {
+    //   API.addOrganization({
+    //     organization: this.state.organization,
+    //     contactFirstName: this.state.contactFirst,
+    //     contactLastName: this.state.contactLast,
+    //     phone: this.state.phone,
+    //     streetAddress: this.state.streetAddress,
+    //     cityStateZipAddress: this.state.cityStateZip,
+    //     email: this.state.email,
+    //     password: this.state.password
+    //   })
+    //     .then(res => console.log(res))
+    //     .catch(err => console.log(err));
+    // }
   };
 
-  handleCreateText = event => {
-
-    // alert("register clicked");
-    this.setState({ isShow: true });
-  }
+  // handleCreateText = event => {
+  //   this.setState({ isShow: true });
+  // }
 
   render() {
-    // console.log(this.state.loginPassword);
+    console.log(this.state.isShow);
+
     return (
       <div className="container-fluid">
         <div className="logIn">
@@ -82,7 +97,7 @@ class LogIn extends Component {
                 register={this.state.register}
                 handleSubmit={this.handleSubmit}
                 handleInputChange={this.handleInputChange}
-                handleOrganizationFormSubmit={this.handleFormSubmit}
+                handleOrganizationFormSubmit={this.handleOrganizationFormSubmit}
                 loginEmail={this.state.loginEmail}
                 loginPassword={this.state.loginPassword}
                 organization={this.state.organization}
@@ -94,7 +109,7 @@ class LogIn extends Component {
                 email={this.state.email}
                 password={this.state.password}
                 isShow={this.state.isShow}
-                handleCreateText={this.handleCreateText}
+                // handleCreateText={this.handleCreateText}
               />
             </div>
           </div>

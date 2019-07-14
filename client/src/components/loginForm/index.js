@@ -2,7 +2,6 @@ import React from "react";
 import { Form, Input} from "@rocketseat/unform";
 import "./index.css";
 import * as Yup from "yup";
-// import RegisterBtn from "../RegisterBtn";
 
 function LogInForm(props){
 
@@ -68,7 +67,7 @@ function LogInForm(props){
                 onChange={props.handleInputChange}
               />
               <p>*All fields are required</p>
-              <button type="submit" onClick={props.handleFormSubmit}>
+              <button type="submit">
                 Sign In
               </button>
             </Form>
@@ -144,7 +143,6 @@ function LogInForm(props){
               <button
                 type="submit"
                 onClick={props.handleOrganizationFormSubmit}
-                onClick={props.handleCreateText}
               >
                 Register
               </button>
