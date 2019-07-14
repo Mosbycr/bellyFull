@@ -11,6 +11,11 @@ function LogInForm(props){
         console.log(email);
     }
 
+    function handlejoinClick(){
+      console.log("clicked")
+
+    }
+
     const schema = Yup.object().shape({
       email: Yup.string()
         .email("Please enter a valid email")
@@ -99,7 +104,7 @@ function LogInForm(props){
                   placeholder="Henrico VA, 23229"
                 />
               <p>*All fields are required</p>
-              <button type="submit">Register</button>
+              <button type="submit" onClick={handlejoinClick}>Register</button>
             </Form>
           </div>
         );
