@@ -19,7 +19,7 @@ export default {
   },
 
   addOrganization: function(organization){
-    return axios.post("/api/organization/", organization);
+    return axios.post("/api/organization", organization);
   }
 
 };
