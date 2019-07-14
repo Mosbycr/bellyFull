@@ -21,6 +21,8 @@ class LoginBtns extends Component {
       this.setState({register: true, signIn: false});
   }
 
+
+
   render() {
     return (
       <div>
