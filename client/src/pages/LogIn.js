@@ -10,6 +10,14 @@ class LogIn extends Component {
     this.state = {
       signIn: false,
       register: false,
+      loginEmail: "",
+      loginPassword: "",
+      organization: "",
+      contactFirst: "",
+      contactLast: "",
+      phone: "",
+      streetAddress: "",
+      cityStateZip: "",
       email: "",
       password: ""
     };
@@ -33,14 +41,14 @@ class LogIn extends Component {
     });
   };
 
-  handleFormSubmit = event => {
+  handleOrganizationFormSubmit = event => {
     event.preventDefault();
     // alert("submitted");
-    console.log(this.state.email, this.state.password);
+
   }
 
   render() {
-    console.log(this.state.email);
+    // console.log(this.state.loginPassword);
     return (
       <div className="container-fluid">
         <div className="logIn">
@@ -64,9 +72,17 @@ class LogIn extends Component {
                 register={this.state.register}
                 handleSubmit={this.handleSubmit}
                 handleInputChange={this.handleInputChange}
+                handleOrganizationFormSubmit={this.handleFormSubmit}
+                loginEmail={this.state.loginEmail}
+                loginPassword={this.state.loginPassword}
+                organization={this.state.organization}
+                contactFirst={this.state.contactFirst}
+                contactLast={this.state.contactLast}
+                phone={this.state.phone}
+                streetAddress={this.state.streetAddress}
+                cityStateZip={this.state.cityStateZip}
                 email={this.state.email}
                 password={this.state.password}
-                handleFormSubmit={this.handleFormSubmit}
               />
             </div>
           </div>

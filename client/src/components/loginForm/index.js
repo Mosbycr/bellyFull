@@ -2,22 +2,15 @@ import React from "react";
 import { Form, Input} from "@rocketseat/unform";
 import "./index.css";
 import * as Yup from "yup";
-import RegisterBtn from "../RegisterBtn";
+// import RegisterBtn from "../RegisterBtn";
 
 function LogInForm(props){
-  
-    function handleLogin(data){
-        console.log(data);
-        // this is where we can grab data and save to database
-        let email = data.email; 
-        console.log(email);
-    }
 
     const schema = Yup.object().shape({
       loginEmail: Yup.string()
         .email("Please enter a valid email")
         .required("Please enter a valid email"),
-      password: Yup.string()
+      loginPassword: Yup.string()
         .matches(
           /^[a-zA-Z]\w{3,14}$/g,
           "Password must start with a letter , must be between 4 and 15 characters in length, and only letters, numbers, and underscores may be used"
@@ -43,13 +36,22 @@ function LogInForm(props){
           /^[A-Za-z . ,'-]+\d{5}(-\d{4})?$/g,
           "Please enter a valid street address"
         )
-        .required("Please enter a valid street address")
+        .required("Please enter a valid street address"),
+      email: Yup.string()
+        .email("Please enter a valid email")
+        .required("Please enter a valid email"),
+      password: Yup.string()
+        .matches(
+          /^[a-zA-Z]\w{3,14}$/g,
+          "Password must start with a letter , must be between 4 and 15 characters in length, and only letters, numbers, and underscores may be used"
+        )
+        .required("Please enter a password")
     });
 
     if(props.signIn === true){
         return (
           <div className="formSignIn">
-            <Form onSubmit={handleLogin} schema={schema}>
+            <Form schema={schema}>
               <Input
                 name="loginEmail"
                 value={props.loginEmail}
@@ -59,10 +61,10 @@ function LogInForm(props){
                 placeholder="sammyGives@gmail.com"
               />
               <Input
-                name="password"
+                name="loginPassword"
                 type="password"
                 label="Password"
-                value={props.loginEmail}
+                value={props.loginPassword}
                 onChange={props.handleInputChange}
               />
               <p>*All fields are required</p>
@@ -81,7 +83,7 @@ function LogInForm(props){
                 type="text"
                 label="Name of Organization"
                 placeholder="Feed The Hungry, LLC"
-                value={props.loginEmail}
+                value={props.organization}
                 onChange={props.handleInputChange}
               />
               <Input
@@ -89,14 +91,14 @@ function LogInForm(props){
                 type="text"
                 label="Contact Name"
                 placeholder="John"
-                value={props.loginEmail}
+                value={props.contactFirst}
                 onChange={props.handleInputChange}
               />
               <Input
                 name="contactLast"
                 type="text"
                 placeholder="Cross"
-                value={props.loginEmail}
+                value={props.contactLast}
                 onChange={props.handleInputChange}
               />
               <Input
@@ -104,7 +106,7 @@ function LogInForm(props){
                 type="text"
                 label="Phone Number"
                 placeholder="804-229-6345"
-                value={props.loginEmail}
+                value={props.phone}
                 onChange={props.handleInputChange}
               />
               <Input
@@ -112,14 +114,14 @@ function LogInForm(props){
                 type="text"
                 label="Address"
                 placeholder="14233 Wonder Drive"
-                value={props.loginEmail}
+                value={props.streetAddress}
                 onChange={props.handleInputChange}
               />
               <Input
                 name="cityStateZip"
                 type="text"
                 placeholder="Henrico VA, 23229"
-                value={props.loginEmail}
+                value={props.cityStateZip}
                 onChange={props.handleInputChange}
               />
               <Input
@@ -127,21 +129,21 @@ function LogInForm(props){
                 type="email"
                 label="Email"
                 placeholder="sammyGives@gmail.com"
-                value={props.loginEmail}
+                value={props.email}
                 onChange={props.handleInputChange}
               />
               <Input
                 name="password"
                 type="password"
                 label="Password"
-                value={props.loginEmail}
+                value={props.password}
                 onChange={props.handleInputChange}
               />
               <p>*All fields are required</p>
-              <RegisterBtn />
+              {/* <RegisterBtn /> */}
 
-              {/* <button type="submit" onClick={handlejoinClick}>Register</button>
-              <h3 >Thank you for signing up. To view donations, click here.</h3> */}
+              <button type="submit" onClick={props.handleOrganizationFormSubmit}>Register</button>
+    
             </Form>
           </div>
         );
