@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Welcome from "../components/WelcomeSignIn";
 import LoginBtns from "../components/LoginBtns";
+import LogInForm from "../components/loginForm";
 
 
 class LogIn extends Component {
@@ -38,6 +39,14 @@ class LogIn extends Component {
               <LoginBtns
                 handleSignInClick={this.handleSignInClick}
                 handleRegisterClick={this.handleRegisterClick}
+              />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-12">
+              <LogInForm 
+                signIn= {this.state.signIn}
+                register={this.state.register}
               />
             </div>
           </div>

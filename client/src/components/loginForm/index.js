@@ -13,20 +13,6 @@ function LogInForm(props){
         console.log(email);
     }
 
-    // componentDidMount() {
-    //   this.state = {
-    //     show: false
-    //   };
-    // }
-    
-    
-
-    // function handlejoinClick(){
-    //   // console.log("clicked")
-    //   //  this.createText();
-
-    // }
-
     const schema = Yup.object().shape({
       email: Yup.string()
         .email("Please enter a valid email")
