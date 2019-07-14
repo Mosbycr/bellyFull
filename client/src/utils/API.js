@@ -12,6 +12,14 @@ export default {
 
   updateFoodById: function(id, food) {
     return axios.put("/api/food/" + id, food);
+  },
+
+  getOrganization: function(){
+    return axios.get("/api/organization");
+  },
+
+  addOrganization: function(organization){
+    return axios.post("/api/organization/", organization);
   }
 
 };
