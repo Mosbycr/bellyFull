@@ -4,26 +4,46 @@ import LoginBtns from "../components/LoginBtns";
 
 
 class LogIn extends Component {
-  
-  render() {
-    return (
-      <div className= "container-fluid">
-        <div className= "logIn">
-        <div className="row">
-          <div className="col-12">
-            <Welcome />
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-12">
-            <LoginBtns />
-          </div>
-        </div>
+  constructor(props) {
+    super(props);
+    this.state = {
+      signIn: false,
+      register: false
+    };
 
+    this.handleSignInClick = this.handleSignInClick.bind(this);
+    this.handleRegisterClick = this.handleRegisterClick.bind(this);
+  }
+
+  handleSignInClick = event => {
+    this.setState({ signIn: true, register: false });
+  };
+
+  handleRegisterClick = event => {
+    this.setState({ register: true, signIn: false });
+  };
+
+  render() {
+    console.log(this.state.signIn, this.state.register);
+    return (
+      <div className="container-fluid">
+        <div className="logIn">
+          <div className="row">
+            <div className="col-12">
+              <Welcome />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-12">
+              <LoginBtns
+                handleSignInClick={this.handleSignInClick}
+                handleRegisterClick={this.handleRegisterClick}
+              />
+            </div>
+          </div>
         </div>
-        
       </div>
-    )
+    );
   }
 }
 
