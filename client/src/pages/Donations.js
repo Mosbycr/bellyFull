@@ -40,6 +40,7 @@ render() {
   console.log(this.state.food);
   return (
     <div className="container-fluid">
+      <div className= "donations">
       <div className="row">
         <div className="col-md-6 text-center">
           <h2>Available Donations</h2>
@@ -96,6 +97,9 @@ render() {
           )}
         </div>
       </div>
+
+      </div>
+      
     </div>
   );
 }

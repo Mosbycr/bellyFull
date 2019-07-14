@@ -27,6 +27,7 @@ html, body, #root {
 /* About Us Page */
 .about{
     margin: 50px;
+    position: relative;
 }
 
 .aboutUs{
@@ -42,4 +43,19 @@ html, body, #root {
 h3{
     font-family: 'Merienda', cursive;
 
+}
+
+
+/* LogIn */
+
+.logIn{
+    margin: 50px;
+    padding-bottom: 20px;
+}
+
+/* Donations */
+
+.donations{
+    margin: 50px;
+    padding-bottom: 20px;
 }
