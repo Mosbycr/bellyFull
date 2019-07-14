@@ -28,16 +28,31 @@ li {
 }
 
 
-.navList > li > a:link, a:visited {
+/* .navList > li > a:link, a:visited { */
     /* display: block; */
     /* width: 120px; */
-    font-weight: bold;
+    /* font-weight: bold; */
     /* text-align: center; */
+    /* padding: 4px; */
+    /* text-decoration: none; */
+    /* text-transform: uppercase; */
+    /* color: rgb(208 207 207); */
+
+/* } */
+
+.navbar-brand{
+     display: block; 
+    width: 120px;
+    font-weight: bold;
+    text-align: center;
     padding: 4px;
     text-decoration: none;
-    /* text-transform: uppercase; */
+    text-transform: uppercase;
     color: rgb(208 207 207);
+}
 
+a:hover{
+    color: rgb(185 49 79);
 }
 
 

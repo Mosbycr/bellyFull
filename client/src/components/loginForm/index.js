@@ -2,8 +2,10 @@ import React from "react";
 import { Form, Input} from "@rocketseat/unform";
 import "./index.css";
 import * as Yup from "yup";
+import RegisterBtn from "../RegisterBtn";
 
 function LogInForm(props){
+  
     function handleSubmit(data){
         console.log(data);
         // this is where we can grab data and save to database
@@ -11,10 +13,19 @@ function LogInForm(props){
         console.log(email);
     }
 
-    function handlejoinClick(){
-      console.log("clicked")
+    // componentDidMount() {
+    //   this.state = {
+    //     show: false
+    //   };
+    // }
+    
+    
 
-    }
+    // function handlejoinClick(){
+    //   // console.log("clicked")
+    //   //  this.createText();
+
+    // }
 
     const schema = Yup.object().shape({
       email: Yup.string()
@@ -104,7 +115,10 @@ function LogInForm(props){
                   placeholder="Henrico VA, 23229"
                 />
               <p>*All fields are required</p>
-              <button type="submit" onClick={handlejoinClick}>Register</button>
+              <RegisterBtn/>
+              
+              {/* <button type="submit" onClick={handlejoinClick}>Register</button>
+              <h3 >Thank you for signing up. To view donations, click here.</h3> */}
             </Form>
           </div>
         );
