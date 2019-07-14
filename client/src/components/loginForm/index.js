@@ -6,7 +6,7 @@ import RegisterBtn from "../RegisterBtn";
 
 function LogInForm(props){
   
-    function handleSubmit(data){
+    function handleLogin(data){
         console.log(data);
         // this is where we can grab data and save to database
         let email = data.email; 
@@ -14,7 +14,7 @@ function LogInForm(props){
     }
 
     const schema = Yup.object().shape({
-      email: Yup.string()
+      loginEmail: Yup.string()
         .email("Please enter a valid email")
         .required("Please enter a valid email"),
       password: Yup.string()
@@ -49,67 +49,97 @@ function LogInForm(props){
     if(props.signIn === true){
         return (
           <div className="formSignIn">
-            <Form onSubmit={handleSubmit} schema={schema}>
+            <Form onSubmit={handleLogin} schema={schema}>
               <Input
-                name="email"
+                name="loginEmail"
+                value={props.loginEmail}
+                onChange={props.handleInputChange}
                 type="email"
                 label="Email"
                 placeholder="sammyGives@gmail.com"
               />
-              <Input name="password" type="password" label="Password" />
+              <Input
+                name="password"
+                type="password"
+                label="Password"
+                value={props.loginEmail}
+                onChange={props.handleInputChange}
+              />
               <p>*All fields are required</p>
-              <button type="submit">Sign In</button>
+              <button type="submit" onClick={props.handleFormSubmit}>
+                Sign In
+              </button>
             </Form>
           </div>
         );
     } else if (props.register === true){
         return (
           <div className="formRegister">
-            <Form onSubmit={handleSubmit} schema={schema}>
+            <Form schema={schema}>
               <Input
                 name="organization"
                 type="text"
                 label="Name of Organization"
                 placeholder="Feed The Hungry, LLC"
+                value={props.loginEmail}
+                onChange={props.handleInputChange}
               />
               <Input
                 name="contactFirst"
                 type="text"
                 label="Contact Name"
                 placeholder="John"
+                value={props.loginEmail}
+                onChange={props.handleInputChange}
               />
               <Input
                 name="contactLast"
                 type="text"
                 placeholder="Cross"
+                value={props.loginEmail}
+                onChange={props.handleInputChange}
               />
               <Input
                 name="phone"
                 type="text"
                 label="Phone Number"
                 placeholder="804-229-6345"
+                value={props.loginEmail}
+                onChange={props.handleInputChange}
               />
-                <Input
-                  name="streetAddress"
-                  type="text"
-                  label="Address"
-                  placeholder="14233 Wonder Drive"
-                />
-                <Input
-                  name="cityStateZip"
-                  type="text"
-                  placeholder="Henrico VA, 23229"
-                />
-                 <Input
+              <Input
+                name="streetAddress"
+                type="text"
+                label="Address"
+                placeholder="14233 Wonder Drive"
+                value={props.loginEmail}
+                onChange={props.handleInputChange}
+              />
+              <Input
+                name="cityStateZip"
+                type="text"
+                placeholder="Henrico VA, 23229"
+                value={props.loginEmail}
+                onChange={props.handleInputChange}
+              />
+              <Input
                 name="email"
                 type="email"
                 label="Email"
                 placeholder="sammyGives@gmail.com"
+                value={props.loginEmail}
+                onChange={props.handleInputChange}
               />
-              <Input name="password" type="password" label="Password" />
+              <Input
+                name="password"
+                type="password"
+                label="Password"
+                value={props.loginEmail}
+                onChange={props.handleInputChange}
+              />
               <p>*All fields are required</p>
-              <RegisterBtn/>
-              
+              <RegisterBtn />
+
               {/* <button type="submit" onClick={handlejoinClick}>Register</button>
               <h3 >Thank you for signing up. To view donations, click here.</h3> */}
             </Form>
