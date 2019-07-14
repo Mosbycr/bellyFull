@@ -1,5 +1,5 @@
 module.exports = {
     Food: require("./food"),
-    Registration: require("./regisrtaion")
+    Organization: require("./organization")
   };
   
