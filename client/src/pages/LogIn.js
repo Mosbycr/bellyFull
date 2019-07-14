@@ -49,22 +49,35 @@ class LogIn extends Component {
 
   handleOrganizationFormSubmit = event => {
     event.preventDefault();
-    alert("submitted");
+    // alert("submitted");
     this.setState({ isShow: true });
-    // if (this.state.organization) {
-    //   API.addOrganization({
-    //     organization: this.state.organization,
-    //     contactFirstName: this.state.contactFirst,
-    //     contactLastName: this.state.contactLast,
-    //     phone: this.state.phone,
-    //     streetAddress: this.state.streetAddress,
-    //     cityStateZipAddress: this.state.cityStateZip,
-    //     email: this.state.email,
-    //     password: this.state.password
-    //   })
-    //     .then(res => console.log(res))
-    //     .catch(err => console.log(err));
-    // }
+
+    if (this.state.organization) {
+      API.addOrganization({
+        organization: this.state.organization,
+        contactFirstName: this.state.contactFirst,
+        contactLastName: this.state.contactLast,
+        phone: this.state.phone,
+        streetAddress: this.state.streetAddress,
+        cityStateZipAddress: this.state.cityStateZip,
+        email: this.state.email,
+        password: this.state.password
+      })
+        .then(res =>
+          console.log(res),
+          this.setState({
+            organization: "",
+            contactFirst: "",
+            contactLast: "",
+            phone: "",
+            streetAddress: "",
+            cityStateZip: "",
+            email: "",
+            password: ""
+          })
+        )
+        .catch(err => console.log(err));
+    }
   };
 
   // handleCreateText = event => {
