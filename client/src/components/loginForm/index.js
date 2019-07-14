@@ -75,6 +75,7 @@ function LogInForm(props){
           </div>
         );
     } else if (props.register === true){
+      // console.log(props.isShow);
         return (
           <div className="formRegister">
             <Form schema={schema}>
@@ -140,10 +141,24 @@ function LogInForm(props){
                 onChange={props.handleInputChange}
               />
               <p>*All fields are required</p>
-              {/* <RegisterBtn /> */}
-
-              <button type="submit" onClick={props.handleOrganizationFormSubmit}>Register</button>
-    
+              <button
+                type="submit"
+                onClick={props.handleOrganizationFormSubmit}
+                onClick={props.handleCreateText}
+              >
+                Register
+              </button>
+              <div>
+                {/* will need to add in extra check or text will show even if input is wrong */}
+                {props.isShow && (
+                  <h5>
+                    Thank you for signing up. To view donations,{" "}
+                    <a className="signUp" href="/donations">
+                      click here.
+                    </a>
+                  </h5>
+                )}
+              </div>
             </Form>
           </div>
         );

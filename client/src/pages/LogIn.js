@@ -10,6 +10,7 @@ class LogIn extends Component {
     this.state = {
       signIn: false,
       register: false,
+      isShow: false,
       loginEmail: "",
       loginPassword: "",
       organization: "",
@@ -24,6 +25,10 @@ class LogIn extends Component {
 
     this.handleSignInClick = this.handleSignInClick.bind(this);
     this.handleRegisterClick = this.handleRegisterClick.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleOrganizationFormSubmit = this.handleOrganizationFormSubmit.bind(
+      this);
+    this.handleCreateText = this.handleCreateText.bind(this);
   }
 
   handleSignInClick = event => {
@@ -44,7 +49,12 @@ class LogIn extends Component {
   handleOrganizationFormSubmit = event => {
     event.preventDefault();
     // alert("submitted");
+  };
 
+  handleCreateText = event => {
+
+    // alert("register clicked");
+    this.setState({ isShow: true });
   }
 
   render() {
@@ -83,6 +93,8 @@ class LogIn extends Component {
                 cityStateZip={this.state.cityStateZip}
                 email={this.state.email}
                 password={this.state.password}
+                isShow={this.state.isShow}
+                handleCreateText={this.handleCreateText}
               />
             </div>
           </div>
