@@ -59,6 +59,8 @@ render() {
                     restaurant={food.restaurant}
                     contact={food.phone}
                     listItems={food.donations}
+                    address={food.address}
+                    contactName={food.contactName}
                     claimed={food.claimed}
                     handleClaimClick={() => this.handleClaimClick(food)}
                     key={food._id}
