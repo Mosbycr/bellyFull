@@ -16,10 +16,9 @@ function DonationsCard(props){
            <li className="list-group-item">{props.contact}</li>
            <li className="list-group-item">{props.contactName}</li>
            <li className="list-group-item">{props.address}</li>
+           <li><button className = "btn claimBtn" onClick ={props.handleClaimClick}>Claim</button> </li>    
+
       </ul>
-           <div className="card-body">
-             <button className = "btn btn-primary " onClick ={props.handleClaimClick}>Claim</button>     
-           </div>
   </div>
    );
  }else {
