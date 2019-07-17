@@ -12,6 +12,8 @@ function ClaimedCard(props) {
           <li className="list-group-item">{props.restaurant}</li>
           <li className="list-group-item">{props.contact}</li>
           <li className="list-group-item">Items Claimed: <br/> {props.listItems}</li>
+          <li className="list-group-item">Contact Name: <br/> {props.contactName}</li>
+          <li className="lsit-group-item">Address: <br/>{props.address}</li>
         </ul>
       </div>
     );
