@@ -1,3 +1,15 @@
 .card{
+    font-family: 'Merienda', cursive;
+
     width: 18rem;
+    /* border: 4px, solid #0e3b43; */
+    margin-bottom: 4px;
+
+}
+
+.card-header{
+    background-color: rgb(67 124 144);
+    color: rgb(208 207 207);
+    border-bottom: 4px solid #0e3b43;
+    font-weight: bold;
 }

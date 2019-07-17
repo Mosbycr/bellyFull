@@ -1,4 +1,4 @@
- import React from "react";
+import React from "react";
 import "./style.css";
 
 
@@ -18,7 +18,7 @@ function DonationsCard(props){
            <li className="list-group-item">{props.address}</li>
       </ul>
            <div className="card-body">
-             <button className = "btn btn-primary " onClick ={props.handleClaimClick}>Claim</button>     
+             <button className = "btn " onClick ={props.handleClaimClick}>Claim</button>     
            </div>
   </div>
    );
