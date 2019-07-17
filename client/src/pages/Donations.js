@@ -89,7 +89,10 @@ render() {
                     restaurant={food.restaurant}
                     contact={food.phone}
                     listItems={food.donations}
+                    contactName={food.contactName}
+                    address={food.address}
                     claimed={food.claimed}
+
                   />
                 </ListItem>
               ))}
