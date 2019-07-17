@@ -36,6 +36,15 @@ class Donations extends Component {
       .catch(err => console.log(err));
    }
 
+   handleUnclaimClick = food =>{
+     food.claimed = false;
+     API.updateFoodById(food._id, food)
+      .then(
+        this.loadFood()
+      )
+      .catch(err => console.log(err));
+   }
+
 render() {
   console.log(this.state.food);
   return (
@@ -92,6 +101,8 @@ render() {
                     contactName={food.contactName}
                     address={food.address}
                     claimed={food.claimed}
+                    handleUnclaimClick={() => this.handleUnclaimClick(food)}
+                    key={food._id}
 
                   />
                 </ListItem>

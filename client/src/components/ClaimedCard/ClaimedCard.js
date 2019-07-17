@@ -15,6 +15,9 @@ function ClaimedCard(props) {
           <li className="list-group-item">Contact Name: <br/> {props.contactName}</li>
           <li className="lsit-group-item">Address: <br/>{props.address}</li>
         </ul>
+        <div className="card-body">
+             <button className = "btn btn-primary " onClick ={props.handleUnclaimClick}>Unclaim</button>     
+           </div>
       </div>
     );
   }else {
