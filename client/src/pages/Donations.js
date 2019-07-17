@@ -40,6 +40,7 @@ render() {
   console.log(this.state.food);
   return (
     <div className="container-fluid">
+      <div className= "donations">
       <div className="row">
         <div className="col-md-6 text-center">
           <h2>Available Donations</h2>
@@ -58,6 +59,8 @@ render() {
                     restaurant={food.restaurant}
                     contact={food.phone}
                     listItems={food.donations}
+                    address={food.address}
+                    contactName={food.contactName}
                     claimed={food.claimed}
                     handleClaimClick={() => this.handleClaimClick(food)}
                     key={food._id}
@@ -96,6 +99,9 @@ render() {
           )}
         </div>
       </div>
+
+      </div>
+      
     </div>
   );
 }

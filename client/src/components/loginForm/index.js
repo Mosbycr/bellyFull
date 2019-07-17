@@ -4,18 +4,12 @@ import "./index.css";
 import * as Yup from "yup";
 
 function LogInForm(props){
-    function handleSubmit(data){
-        console.log(data);
-        // this is where we can grab data and save to database
-        let email = data.email; 
-        console.log(email);
-    }
 
     const schema = Yup.object().shape({
-      email: Yup.string()
+      loginEmail: Yup.string()
         .email("Please enter a valid email")
         .required("Please enter a valid email"),
-      password: Yup.string()
+      loginPassword: Yup.string()
         .matches(
           /^[a-zA-Z]\w{3,14}$/g,
           "Password must start with a letter , must be between 4 and 15 characters in length, and only letters, numbers, and underscores may be used"
@@ -41,65 +35,128 @@ function LogInForm(props){
           /^[A-Za-z . ,'-]+\d{5}(-\d{4})?$/g,
           "Please enter a valid street address"
         )
-        .required("Please enter a valid street address")
+        .required("Please enter a valid street address"),
+      email: Yup.string()
+        .email("Please enter a valid email")
+        .required("Please enter a valid email"),
+      password: Yup.string()
+        .matches(
+          /^[a-zA-Z]\w{3,14}$/g,
+          "Password must start with a letter , must be between 4 and 15 characters in length, and only letters, numbers, and underscores may be used"
+        )
+        .required("Please enter a password")
     });
 
     if(props.signIn === true){
         return (
           <div className="formSignIn">
-            <Form onSubmit={handleSubmit} schema={schema}>
+            <Form schema={schema}>
               <Input
-                name="email"
+                name="loginEmail"
+                value={props.loginEmail}
+                onChange={props.handleInputChange}
                 type="email"
                 label="Email"
                 placeholder="sammyGives@gmail.com"
               />
-              <Input name="password" type="password" label="Password" />
+              <Input
+                name="loginPassword"
+                type="password"
+                label="Password"
+                value={props.loginPassword}
+                onChange={props.handleInputChange}
+              />
               <p>*All fields are required</p>
-              <button type="submit">Sign In</button>
+              <button type="submit">
+                Sign In
+              </button>
             </Form>
           </div>
         );
     } else if (props.register === true){
+      // console.log(props.isShow);
         return (
           <div className="formRegister">
-            <Form onSubmit={handleSubmit} schema={schema}>
+            <Form schema={schema}>
               <Input
                 name="organization"
                 type="text"
                 label="Name of Organization"
                 placeholder="Feed The Hungry, LLC"
+                value={props.organization}
+                onChange={props.handleInputChange}
               />
               <Input
                 name="contactFirst"
                 type="text"
                 label="Contact Name"
                 placeholder="John"
+                value={props.contactFirst}
+                onChange={props.handleInputChange}
               />
               <Input
                 name="contactLast"
                 type="text"
                 placeholder="Cross"
+                value={props.contactLast}
+                onChange={props.handleInputChange}
               />
               <Input
                 name="phone"
                 type="text"
                 label="Phone Number"
                 placeholder="804-229-6345"
+                value={props.phone}
+                onChange={props.handleInputChange}
               />
-                <Input
-                  name="streetAddress"
-                  type="text"
-                  label="Address"
-                  placeholder="14233 Wonder Drive"
-                />
-                <Input
-                  name="cityStateZip"
-                  type="text"
-                  placeholder="Henrico VA, 23229"
-                />
+              <Input
+                name="streetAddress"
+                type="text"
+                label="Address"
+                placeholder="14233 Wonder Drive"
+                value={props.streetAddress}
+                onChange={props.handleInputChange}
+              />
+              <Input
+                name="cityStateZip"
+                type="text"
+                placeholder="Henrico VA, 23229"
+                value={props.cityStateZip}
+                onChange={props.handleInputChange}
+              />
+              <Input
+                name="email"
+                type="email"
+                label="Email"
+                placeholder="sammyGives@gmail.com"
+                value={props.email}
+                onChange={props.handleInputChange}
+              />
+              <Input
+                name="password"
+                type="password"
+                label="Password"
+                value={props.password}
+                onChange={props.handleInputChange}
+              />
               <p>*All fields are required</p>
-              <button type="submit">Register</button>
+              <button
+                type="submit"
+                onClick={props.handleOrganizationFormSubmit}
+              >
+                Register
+              </button>
+              <div>
+                {/* will need to add in extra check or text will show even if input is wrong */}
+                {props.isShow && (
+                  <h5>
+                    Thank you for signing up. To view donations,{" "}
+                    <a className="signUp" href="/donations">
+                      click here.
+                    </a>
+                  </h5>
+                )}
+              </div>
             </Form>
           </div>
         );
