@@ -21,19 +21,47 @@ class LogIn extends Component {
       streetAddress: "",
       cityStateZip: "",
       email: "",
-      password: ""
+      password: "",
+      organizationlogIn: []
     };
+
 
     this.handleSignInClick = this.handleSignInClick.bind(this);
     this.handleRegisterClick = this.handleRegisterClick.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleOrganizationFormSubmit = this.handleOrganizationFormSubmit.bind(
       this);
+      this.handleLogIn = this.handleLogIn.bind(this);
     // this.handleCreateText = this.handleCreateText.bind(this);
   };
 
+  componentDidMount(){
+    this.loadOrganization();
+  }
+
+  loadOrganization=()=>{
+    API.getOrganization()
+    .then(res=>
+      this.setState({organizationlogIn:res.data})
+      )
+      .catch(err=> console.log(err));
+  };
+
+  handleLogIn = event => {
+    if (this.state.loginEmail = this.state.organizationlogIn.email){
+      window.location.href = '/donations'
+
+    } else{
+      console.log("email doesn't match")
+
+    }
+
+  };
+
+
   handleSignInClick = event => {
     this.setState({ signIn: true, register: false });
+  
   };
 
   handleRegisterClick = event => {
@@ -122,6 +150,7 @@ class LogIn extends Component {
                 email={this.state.email}
                 password={this.state.password}
                 isShow={this.state.isShow}
+                handleLogIn={this.handleLogIn}
                 // handleCreateText={this.handleCreateText}
               />
             </div>
