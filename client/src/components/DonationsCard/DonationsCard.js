@@ -14,6 +14,8 @@ function DonationsCard(props){
        <ul className="list-group list-group-flush">
            <li className="list-group-item">{props.listItems}</li>
            <li className="list-group-item">{props.contact}</li>
+           <li className="list-group-item">{props.contactName}</li>
+           <li className="list-group-item">{props.address}</li>
       </ul>
            <div className="card-body">
              <button className = "btn btn-primary " onClick ={props.handleClaimClick}>Claim</button>     
