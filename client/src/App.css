@@ -9,7 +9,7 @@ html, body, #root {
     min-height: 100vh;
     width: 100%;
     position: relative;
-    font-family: 'Cuprum', sans-serif;
+    /* font-family: 'Cuprum', sans-serif; */
     color: rgb(14 59 67);
     background-color: rgb(208 207 207);
 }
@@ -36,7 +36,7 @@ html, body, #root {
 
 .aboutUs{
     font-weight: bold;
-    font-family: 'Merienda', cursive;
+    /* font-family: 'Merienda', cursive; */
 
 }
 
@@ -45,7 +45,7 @@ html, body, #root {
 }
 
 h3{
-    font-family: 'Merienda', cursive;
+    /* font-family: 'Merienda', cursive; */
 
 }
 
