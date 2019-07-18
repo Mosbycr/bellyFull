@@ -1,8 +1,9 @@
 .inform {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 50px;
-    width: 75em
+        width: 75em;
+        margin-bottom: 80px;
+       
 }
 
 .homeHeader{ 
@@ -10,11 +11,13 @@
     margin-right: auto;
     width: 8em;
     font-weight: bold;
-    
+    margin-bottom: 20px;
+    margin-top: 50px;
+
 }
 
 .subHeader{
-    margin-left: 50px;
+    margin-left: 60px;
     margin-bottom: 20px;
 }
 
