@@ -7,7 +7,7 @@ function DonationsCard(props){
 
    return(
    <div className="card mx-auto" >
-        <div className="card-header">
+        <div className="card-header" >
 
         <h5>{props.restaurant}</h5>
         </div>
@@ -16,9 +16,10 @@ function DonationsCard(props){
            <li className="list-group-item">{props.contact}</li>
            <li className="list-group-item">{props.contactName}</li>
            <li className="list-group-item">{props.address}</li>
-           <li><button className = "btn claimBtn" onClick ={props.handleClaimClick}>Claim</button> </li>    
-
-      </ul>
+      </ul> <hr></hr>
+      <div className = "cardbody">
+      <button className = "btn claimBtn" onClick ={props.handleClaimClick}>Claim</button>
+      </div>
   </div>
    );
  }else {

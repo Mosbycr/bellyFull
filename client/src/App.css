@@ -59,3 +59,7 @@ h3{
     margin: 50px;
     padding-bottom: 20px;
 }
+
+.pageHeader{
+    font-weight: bold;
+}

@@ -52,7 +52,7 @@ render() {
       <div className= "donations">
       <div className="row">
         <div className="col-md-6 text-center">
-          <h2>Available Donations</h2>
+          <h2 className="pageHeader">Available Donations</h2>
           <hr />
           <br />
           {this.state.food.length ? (
@@ -82,7 +82,7 @@ render() {
           )}
         </div>
         <div className="col-md-6 text-center">
-          <h2>Claimed</h2>
+          <h2 className="pageHeader">Claimed</h2>
           <hr />
           <br />
           {this.state.food.length ? (

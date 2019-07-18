@@ -11,12 +11,12 @@ function ClaimedCard(props) {
         <ul className="list-group list-group-flush">
           <li className="list-group-item">{props.restaurant}</li>
           <li className="list-group-item">{props.contact}</li>
-          <li className="list-group-item">Items Claimed: <br/> {props.listItems}</li>
-          <li className="list-group-item">Contact Name: <br/> {props.contactName}</li>
-          <li className="lsit-group-item">Address: <br/>{props.address}</li>
-        </ul>
+          <li className="list-group-item "><p className= "itemsClaimed">Items Claimed:</p>{props.listItems}</li>
+          <li className="list-group-item"><p className= "itemsClaimed">Contact Name:</p>{props.contactName}</li>
+          <li className="lsit-group-item"><p className= "itemsClaimed">Address:</p>{props.address}</li>
+        </ul> <hr></hr>
         <div className="card-body">
-             <button className = "btn btn-primary " onClick ={props.handleUnclaimClick}>Unclaim</button>     
+             <button className = "btn unclaimBtn " onClick ={props.handleUnclaimClick}>Unclaim</button>     
            </div>
       </div>
     );
