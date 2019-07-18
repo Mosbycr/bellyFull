@@ -61,5 +61,6 @@ h3{
 }
 
 .pageHeader{
-    font-weight: bold;
+    font-weight:bold;
+    text-shadow: 2px 2px 5px #437c90;
 }
