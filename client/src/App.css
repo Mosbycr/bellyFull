@@ -60,6 +60,12 @@ h3{
 /* Donations */
 
 .donations{
-    /* margin-bottom needs to be set to same height as footer to show all form info */
+/* margin-bottom needs to be set to same height as footer to show all form info */
     margin-bottom: 100px;
 }
+
+.pageHeader{
+    font-weight:bold;
+}
+    
+
