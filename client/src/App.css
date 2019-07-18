@@ -24,13 +24,14 @@ html, body, #root {
     position: relative;
     min-height: 100vh;
     padding-bottom: 60px;
-
 }
 
 /* About Us Page */
+
 .about{
-    margin: 50px;
-    position: relative;
+    /* margin-bottom needs to be set to same height as footer to show all form info */
+    margin-bottom: 100px;
+    
 }
 
 .aboutUs{
@@ -52,13 +53,13 @@ h3{
 /* LogIn */
 
 .logIn{
-    margin: 50px;
-    padding-bottom: 20px;
+    /* margin-bottom needs to be set to same height as footer to show all form info */
+    margin-bottom: 100px;
 }
 
 /* Donations */
 
 .donations{
-    margin: 50px;
-    padding-bottom: 20px;
+    /* margin-bottom needs to be set to same height as footer to show all form info */
+    margin-bottom: 100px;
 }
