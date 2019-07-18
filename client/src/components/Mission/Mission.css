@@ -1,0 +1,23 @@
+.inform {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    width: 75em
+}
+
+.homeHeader{ 
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em;
+    font-weight: bold;
+    
+}
+
+.subHeader{
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+.lastHeader{
+    margin-left: 100px;
+}
