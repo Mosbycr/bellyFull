@@ -7,13 +7,13 @@ function Footer(){
         <div className="row">
           <div className="col-md-12 text-center">
             <div className="icons">
-              <a href="#">
+              <a href="https://www.facebook.com/BellyFull-505753420167138">
                 <i className="fab fa-facebook fa-3x pr-5" />
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/bellyfullrichmondva/">
                 <i className="fab fa-instagram fa-3x" />
               </a>
-              <a href="#">
+              <a href="https://github.com/Mosbycr/bellyFull">
                 <i className="fab fa-github fa-3x pl-5" />
               </a>
             </div>
