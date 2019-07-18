@@ -4,7 +4,6 @@ import LoginBtns from "../components/LoginBtns";
 import LogInForm from "../components/loginForm";
 import API from "../utils/API";
 
-
 class LogIn extends Component {
   constructor(props) {
     super(props);
@@ -21,16 +20,17 @@ class LogIn extends Component {
       streetAddress: "",
       cityStateZip: "",
       email: "",
-      password: ""
+      password: "",
+      organizationlogIn: []
     };
 
     this.handleSignInClick = this.handleSignInClick.bind(this);
     this.handleRegisterClick = this.handleRegisterClick.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleOrganizationFormSubmit = this.handleOrganizationFormSubmit.bind(
-      this);
-    // this.handleCreateText = this.handleCreateText.bind(this);
-  };
+      this
+    );
+  }
 
   handleSignInClick = event => {
     this.setState({ signIn: true, register: false });
@@ -63,8 +63,8 @@ class LogIn extends Component {
         email: this.state.email,
         password: this.state.password
       })
-        .then(res =>
-          console.log(res),
+        .then(
+          res => console.log(res),
           this.setState({
             organization: "",
             contactFirst: "",
@@ -79,10 +79,6 @@ class LogIn extends Component {
         .catch(err => console.log(err));
     }
   };
-
-  // handleCreateText = event => {
-  //   this.setState({ isShow: true });
-  // }
 
   render() {
     console.log(this.state.isShow);
@@ -122,6 +118,7 @@ class LogIn extends Component {
                 email={this.state.email}
                 password={this.state.password}
                 isShow={this.state.isShow}
+                handleLogIn={this.handleLogIn}
                 // handleCreateText={this.handleCreateText}
               />
             </div>
