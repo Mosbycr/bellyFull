@@ -1,12 +1,10 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import DonationsCard from "../components/DonationsCard/DonationsCard";
 import ClaimedCard from "../components/ClaimedCard/ClaimedCard";
 import API from "../utils/API";
-import List from "../components/List"
+import List from "../components/List";
 import ListItem from "../components/List";
 import { Link } from "react-router-dom";
-
-
 
 class Donations extends Component {
   state = {
@@ -19,105 +17,94 @@ class Donations extends Component {
 
   loadFood = () => {
     API.getFood()
-    .then(res => 
-      this.setState({ food: res.data})
-    )
-    .catch(err => console.log(err));
+      .then(res => this.setState({ food: res.data }))
+      .catch(err => console.log(err));
   };
 
-
-  
-  handleClaimClick = food =>{
+  handleClaimClick = food => {
     food.claimed = true;
     API.updateFoodById(food._id, food)
-      .then(
-        this.loadFood()
-      )
+      .then(this.loadFood())
       .catch(err => console.log(err));
-   }
+  };
 
-   handleUnclaimClick = food =>{
-     food.claimed = false;
-     API.updateFoodById(food._id, food)
-      .then(
-        this.loadFood()
-      )
+  handleUnclaimClick = food => {
+    food.claimed = false;
+    API.updateFoodById(food._id, food)
+      .then(this.loadFood())
       .catch(err => console.log(err));
-   }
+  };
 
-render() {
-  console.log(this.state.food);
-  return (
-    <div className="container-fluid">
-      <div className= "donations">
-      <div className="row">
-        <div className="col-md-6 text-center">
-          <h2 className="pageHeader">Available Donations</h2>
-          <hr />
-          <br />
-          {this.state.food.length ? (
-            <List>
-              {this.state.food.map(food => (
-                <ListItem key={food._id}>
-                  <Link to={"/food/" + food._id}>
-                    {/* <strong>
+  render() {
+    console.log(this.state.food);
+    return (
+      <div className="container-fluid">
+        <div className="donations">
+          <div className="row">
+            <div className="col-md-6 text-center">
+              <h2 className="pageHeader">Available Donations</h2>
+              <hr />
+              <br />
+              {this.state.food.length ? (
+                <List>
+                  {this.state.food.map(food => (
+                    <ListItem key={food._id}>
+                      <Link to={"/food/" + food._id}>
+                        {/* <strong>
             {food.restaurant} <br /> {food.phone}
           </strong> */}
-                  </Link>
-                  <DonationsCard
-                    restaurant={food.restaurant}
-                    contact={food.phone}
-                    listItems={food.donations}
-                    address={food.address}
-                    contactName={food.contactName}
-                    claimed={food.claimed}
-                    handleClaimClick={() => this.handleClaimClick(food)}
-                    key={food._id}
-                  />
-                </ListItem>
-              ))}
-            </List>
-          ) : (
-            <div></div>
-          )}
-        </div>
-        <div className="col-md-6 text-center">
-          <h2 className="pageHeader">Claimed</h2>
-          <hr />
-          <br />
-          {this.state.food.length ? (
-            <List>
-              {this.state.food.map(food => (
-                <ListItem key={food._id}>
-                  <Link to={"/food/" + food._id}>
-                    {/* <strong>
+                      </Link>
+                      <DonationsCard
+                        restaurant={food.restaurant}
+                        contact={food.phone}
+                        listItems={food.donations}
+                        address={food.address}
+                        contactName={food.contactName}
+                        claimed={food.claimed}
+                        handleClaimClick={() => this.handleClaimClick(food)}
+                        key={food._id}
+                      />
+                    </ListItem>
+                  ))}
+                </List>
+              ) : (
+                <div />
+              )}
+            </div>
+            <div className="col-md-6 text-center">
+              <h2 className="pageHeader">Claimed</h2>
+              <hr />
+              <br />
+              {this.state.food.length ? (
+                <List>
+                  {this.state.food.map(food => (
+                    <ListItem key={food._id}>
+                      <Link to={"/food/" + food._id}>
+                        {/* <strong>
             {food.restaurant} <br /> {food.phone}
           </strong> */}
-                  </Link>
-                  <ClaimedCard
-                    restaurant={food.restaurant}
-                    contact={food.phone}
-                    listItems={food.donations}
-                    contactName={food.contactName}
-                    address={food.address}
-                    claimed={food.claimed}
-                    handleUnclaimClick={() => this.handleUnclaimClick(food)}
-                    key={food._id}
-
-                  />
-                </ListItem>
-              ))}
-            </List>
-          ) : (
-           <div></div>
-          )}
+                      </Link>
+                      <ClaimedCard
+                        restaurant={food.restaurant}
+                        contact={food.phone}
+                        listItems={food.donations}
+                        contactName={food.contactName}
+                        address={food.address}
+                        claimed={food.claimed}
+                        handleUnclaimClick={() => this.handleUnclaimClick(food)}
+                        key={food._id}
+                      />
+                    </ListItem>
+                  ))}
+                </List>
+              ) : (
+                <div />
+              )}
+            </div>
+          </div>
         </div>
       </div>
-
-      </div>
-      
-    </div>
-  );
-}
+    );
+  }
 }
 export default Donations;
