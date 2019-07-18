@@ -3,6 +3,7 @@
     border-top: 4px solid #0e3b43;
     position: absolute;
     width: 100%;
+    bottom: 0;
     text-align: center;
     color: #d0cfcf;
 }
