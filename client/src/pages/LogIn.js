@@ -4,7 +4,6 @@ import LoginBtns from "../components/LoginBtns";
 import LogInForm from "../components/loginForm";
 import API from "../utils/API";
 
-
 class LogIn extends Component {
   constructor(props) {
     super(props);
@@ -25,45 +24,16 @@ class LogIn extends Component {
       organizationlogIn: []
     };
 
-
     this.handleSignInClick = this.handleSignInClick.bind(this);
     this.handleRegisterClick = this.handleRegisterClick.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleOrganizationFormSubmit = this.handleOrganizationFormSubmit.bind(
-      this);
-      // this.handleLogIn = this.handleLogIn.bind(this);
-    // this.handleCreateText = this.handleCreateText.bind(this);
-  };
-
-  // componentDidMount(){
-  //   this.loadOrganization();
-  // }
-
-  // loadOrganization=()=>{
-  //   API.getOrganization()
-  //   .then(res=>
-  //     this.setState({organizationlogIn:res.data})
-  //     )
-  //     .catch(err=> console.log(err));
-  // };
-
-  // handleLogIn = event => {
-  //   if (this.state.loginEmail === this.state.organizationlogIn.email){
-  //    console.log("it matches!")     
-  //     window.location.href = "/donations";
-
-
-  //   } else{
-  //     console.log("email doesn't match")
-
-  //   }
-
-  // };
-
+      this
+    );
+  }
 
   handleSignInClick = event => {
     this.setState({ signIn: true, register: false });
-  
   };
 
   handleRegisterClick = event => {
@@ -93,8 +63,8 @@ class LogIn extends Component {
         email: this.state.email,
         password: this.state.password
       })
-        .then(res =>
-          console.log(res),
+        .then(
+          res => console.log(res),
           this.setState({
             organization: "",
             contactFirst: "",
@@ -109,10 +79,6 @@ class LogIn extends Component {
         .catch(err => console.log(err));
     }
   };
-
-  // handleCreateText = event => {
-  //   this.setState({ isShow: true });
-  // }
 
   render() {
     console.log(this.state.isShow);
