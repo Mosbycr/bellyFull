@@ -6,6 +6,7 @@
     background-size: cover;
     background-position: center center;
     height: 500px;
+    border-bottom: 4px solid #0e3b43;
 }
 
 .display-4 {

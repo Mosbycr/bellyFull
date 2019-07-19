@@ -27,7 +27,9 @@ html, body, #root {
 }
 
 /* About Us Page */
-
+.home{
+    margin-bottom: 100px;
+}
 .about{
     /* margin-bottom needs to be set to same height as footer to show all form info */
     margin-bottom: 100px;
@@ -62,6 +64,18 @@ h3{
 /* Donations */
 
 .donations{
-    /* margin-bottom needs to be set to same height as footer to show all form info */
+/* margin-bottom needs to be set to same height as footer to show all form info */
     margin-bottom: 100px;
+    margin-top: 50px;
 }
+
+.donationsLine{
+    width: 500px;
+
+}
+
+.pageHeader{
+    font-weight:bold;
+}
+    
+
