@@ -151,7 +151,7 @@ function LogInForm(props){
                 {/* will need to add in extra check or text will show even if input is wrong */}
                 {props.isShow && (
                   <h5>
-                    Thank you for signing up. To view donations,{" "}
+                    Thank you for signing up. Please log in to view donations.{" "}
                     <a className="signUp" href="/donations">
                       click here.
                     </a>
