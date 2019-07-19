@@ -9,7 +9,7 @@ html, body, #root {
     min-height: 100vh;
     width: 100%;
     position: relative;
-    font-family: 'Cuprum', sans-serif;
+    /* font-family: 'Cuprum', sans-serif; */
     color: rgb(14 59 67);
     background-color: rgb(208 207 207);
 }
@@ -24,18 +24,21 @@ html, body, #root {
     position: relative;
     min-height: 100vh;
     padding-bottom: 60px;
-
 }
 
 /* About Us Page */
+.home{
+    margin-bottom: 100px;
+}
 .about{
-    margin: 50px;
-    position: relative;
+    /* margin-bottom needs to be set to same height as footer to show all form info */
+    margin-bottom: 100px;
+    
 }
 
 .aboutUs{
     font-weight: bold;
-    font-family: 'Merienda', cursive;
+    /* font-family: 'Merienda', cursive; */
 
 }
 
@@ -44,7 +47,7 @@ html, body, #root {
 }
 
 h3{
-    font-family: 'Merienda', cursive;
+    /* font-family: 'Merienda', cursive; */
 
 }
 
@@ -52,13 +55,27 @@ h3{
 /* LogIn */
 
 .logIn{
-    margin: 50px;
-    padding-bottom: 20px;
+    /* margin-bottom needs to be set to same height as footer to show all form info */
+    margin-bottom: 50px;
+    position: relative;
+    min-height: 100vh;
 }
 
 /* Donations */
 
 .donations{
-    margin: 50px;
-    padding-bottom: 20px;
+/* margin-bottom needs to be set to same height as footer to show all form info */
+    margin-bottom: 100px;
+    margin-top: 50px;
 }
+
+.donationsLine{
+    width: 500px;
+
+}
+
+.pageHeader{
+    font-weight:bold;
+}
+    
+

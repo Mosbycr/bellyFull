@@ -1,14 +1,14 @@
 import React from "react";
-// import LogInForm from "../loginForm";
+import "./index.css";
 
 function LoginBtns(props) {
     return (
       <div>
         <div className="btnContainer text-center">
-          <button className="btn" onClick={props.handleSignInClick}>
+          <button className="btn loginBtns signIn" onClick={props.handleSignInClick}>
             Sign In
           </button>
-          <button className="btn" onClick={props.handleRegisterClick}>
+          <button className="btn loginBtns register" onClick={props.handleRegisterClick}>
             Register
           </button>
         </div>

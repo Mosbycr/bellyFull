@@ -10,20 +10,28 @@ function ClaimedCard(props) {
         </div>
         <ul className="list-group list-group-flush">
           <li className="list-group-item">{props.restaurant}</li>
+          <li className="list-group-item ">
+            <p className="itemsClaimed">Items Claimed:</p>
+            {props.listItems}
+          </li>
+          <li className="list-group-item">{props.contactName}</li>
           <li className="list-group-item">{props.contact}</li>
-          <li className="list-group-item">Items Claimed: <br/> {props.listItems}</li>
-          <li className="list-group-item">Contact Name: <br/> {props.contactName}</li>
-          <li className="lsit-group-item">Address: <br/>{props.address}</li>
-        </ul>
+
+          <li className="lsit-group-item address">{props.address}</li>
+        </ul>{" "}
+        <hr />
         <div className="card-body">
-             <button className = "btn btn-primary " onClick ={props.handleUnclaimClick}>Unclaim</button>     
-           </div>
+          <button
+            className="btn unclaimBtn "
+            onClick={props.handleUnclaimClick}
+          >
+            Unclaim
+          </button>
+        </div>
       </div>
     );
-  }else {
-      return (
-          <div></div>
-      )
+  } else {
+    return <div />;
   }
 }
 
