@@ -38,7 +38,7 @@ function Mission() {
           when less donations come in. Using BellyFull, however, allows you to keep ALL of your nonperishables for a rainy day. 
           We also help you to provide fresh, healthy food to food-insecure families, providing them the best options whenever possible. 
         </p>
-        <a href="/LogIn" className="btn">
+        <a href="/LogIn" className="btn getStarted">
           Get Started
         </a>
       </div>
