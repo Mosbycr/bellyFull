@@ -92,7 +92,7 @@ class LogIn extends Component {
       <div>
         <Jumbotron>
           <div className="signinWelcome text-center">
-            <h1 className="signinHeader">Welcome to Bellyfull!</h1>
+            <h1 className="welcomeHeader">Welcome to Bellyfull!</h1>
             <h2 className="secondHeader">
               Let's fight Richmond's hunger crisis and reduce waste.
             </h2>
@@ -100,19 +100,15 @@ class LogIn extends Component {
               Sign in to connect with local restaurants. <br /> New here?
               Register your organization and start connecting today.
             </p>
+            <LoginBtns
+              handleSignInClick={this.handleSignInClick}
+              handleRegisterClick={this.handleRegisterClick}
+            />
           </div>
         </Jumbotron>
 
         <div className="container-fluid">
           <div className="logIn">
-            <div className="row">
-              <div className="col-12">
-                <LoginBtns
-                  handleSignInClick={this.handleSignInClick}
-                  handleRegisterClick={this.handleRegisterClick}
-                />
-              </div>
-            </div>
             <div className="row">
               <div className="col-12">
                 <LogInForm
