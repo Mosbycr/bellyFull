@@ -3,8 +3,10 @@ import "./Mission.css";
 
 function Mission() {
   return (
-    <div class="row">
-      <div class="col-sm-12">
+<div className ="container-fluid">
+<div className="home">
+    <div className="row">
+      <div className="col-sm-12">
      
         <h3 className="subHeader">Our Mission</h3>
         <p className="inform">
@@ -40,6 +42,8 @@ function Mission() {
           Get Started
         </a>
       </div>
+    </div>
+    </div>
     </div>
   );
 }
