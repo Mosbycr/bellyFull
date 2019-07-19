@@ -1,10 +1,11 @@
 import React from "react";
 import "./Mission.css";
+
 function Mission() {
   return (
     <div class="row">
       <div class="col-sm-12">
-        <h2 className="homeHeader">About Us</h2>
+     
         <h3 className="subHeader">Our Mission</h3>
         <p className="inform">
           At BellyFull our vision is a simple one, help the Richmond community.
