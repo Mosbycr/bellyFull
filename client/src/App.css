@@ -62,6 +62,12 @@ h3{
 .donations{
 /* margin-bottom needs to be set to same height as footer to show all form info */
     margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+.donationsLine{
+    width: 500px;
+
 }
 
 .pageHeader{
