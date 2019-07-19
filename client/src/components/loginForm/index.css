@@ -1,28 +1,26 @@
 input {
     display: block;
-    width: 300px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    width: 400px;
+    border: 1px solid #0e3b43;
+    padding-top: 7px;
 }
 
 label {
     display: block;
+    padding-top: 15px;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 button {
     display: block;
+    width: 150px;
 }
 
 span {
     display: block;
     color: #b9314f;
 }
-
-/* .logInForm {
-    margin-left: auto;
-    margin-right: auto;
-    width: 75em;
-} */
 
 .formSignIn {
     margin-top: 150px;
@@ -38,4 +36,9 @@ span {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.allFields {
+    padding-top: 5px;
+    color:  rgb(185 49 79);
 }
