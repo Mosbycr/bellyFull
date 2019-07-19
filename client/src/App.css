@@ -54,7 +54,9 @@ h3{
 
 .logIn{
     /* margin-bottom needs to be set to same height as footer to show all form info */
-    margin-bottom: 100px;
+    margin-bottom: 135px;
+    position: relative;
+    min-height: 100vh;
 }
 
 /* Donations */

@@ -17,3 +17,25 @@ span {
     display: block;
     color: #b9314f;
 }
+
+/* .logInForm {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75em;
+} */
+
+.formSignIn {
+    margin-top: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.formRegister {
+    margin-top: 340px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

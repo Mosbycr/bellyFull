@@ -67,7 +67,7 @@ function LogInForm(props){
                 onChange={props.handleInputChange}
               />
               <p>*All fields are required</p>
-              <button type="submit">
+              <button className="btn" type="submit">
                 Sign In
               </button>
             </Form>
@@ -141,6 +141,7 @@ function LogInForm(props){
               />
               <p>*All fields are required</p>
               <button
+                className="btn"
                 type="submit"
                 onClick={props.handleOrganizationFormSubmit}
               >
