@@ -30,7 +30,7 @@ class LogIn extends Component {
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleOrganizationFormSubmit = this.handleOrganizationFormSubmit.bind(
       this
-    );
+);
   }
 
   handleSignInClick = event => {
@@ -39,6 +39,7 @@ class LogIn extends Component {
 
   handleRegisterClick = event => {
     this.setState({ register: true, signIn: false });
+    // if (this.state.register:true)
   };
 
   handleInputChange = event => {
