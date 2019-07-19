@@ -39,5 +39,5 @@
 
 
 ## Special Thanks
-We would like to credit for creating a great logo for our website and for allowing us to use an image taken by him.
+We would like to credit Danny Tiet. for creating a logo for our website and for allowing us to use an image taken by him for our home and logIn pages.
 
