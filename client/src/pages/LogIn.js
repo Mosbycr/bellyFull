@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Welcome from "../components/WelcomeSignIn";
+// import Welcome from "../components/WelcomeSignIn";
+import Jumbotron from "../components/Jumbotron/Jumbotron";
 import LoginBtns from "../components/LoginBtns";
 import LogInForm from "../components/loginForm";
 import API from "../utils/API";
@@ -85,45 +86,57 @@ class LogIn extends Component {
   // }
 
   render() {
-    console.log(this.state.isShow);
+    // console.log(this.state.isShow);
 
     return (
-      <div className="container-fluid">
-        <div className="logIn">
-          <div className="row">
-            <div className="col-12">
-              <Welcome />
-            </div>
+      <div>
+        <Jumbotron>
+          <div className="signinWelcome text-center">
+            <h1 className="signinHeader">Welcome to Bellyfull!</h1>
+            <h2 className="secondHeader">
+              Let's fight Richmond's hunger crisis and reduce waste.
+            </h2>
+            <p className="welcomeMsg">
+              Sign in to connect with local restaurants. <br /> New here?
+              Register your organization and start connecting today.
+            </p>
           </div>
-          <div className="row">
-            <div className="col-12">
-              <LoginBtns
-                handleSignInClick={this.handleSignInClick}
-                handleRegisterClick={this.handleRegisterClick}
-              />
+        </Jumbotron>
+
+        <div className="container-fluid">
+          <div className="logIn">
+            <div className="row">
+              <div className="col-12">
+                <LoginBtns
+                  handleSignInClick={this.handleSignInClick}
+                  handleRegisterClick={this.handleRegisterClick}
+                />
+              </div>
             </div>
-          </div>
-          <div className="row">
-            <div className="col-12">
-              <LogInForm
-                signIn={this.state.signIn}
-                register={this.state.register}
-                handleSubmit={this.handleSubmit}
-                handleInputChange={this.handleInputChange}
-                handleOrganizationFormSubmit={this.handleOrganizationFormSubmit}
-                loginEmail={this.state.loginEmail}
-                loginPassword={this.state.loginPassword}
-                organization={this.state.organization}
-                contactFirst={this.state.contactFirst}
-                contactLast={this.state.contactLast}
-                phone={this.state.phone}
-                streetAddress={this.state.streetAddress}
-                cityStateZip={this.state.cityStateZip}
-                email={this.state.email}
-                password={this.state.password}
-                isShow={this.state.isShow}
-                // handleCreateText={this.handleCreateText}
-              />
+            <div className="row">
+              <div className="col-12">
+                <LogInForm
+                  signIn={this.state.signIn}
+                  register={this.state.register}
+                  handleSubmit={this.handleSubmit}
+                  handleInputChange={this.handleInputChange}
+                  handleOrganizationFormSubmit={
+                    this.handleOrganizationFormSubmit
+                  }
+                  loginEmail={this.state.loginEmail}
+                  loginPassword={this.state.loginPassword}
+                  organization={this.state.organization}
+                  contactFirst={this.state.contactFirst}
+                  contactLast={this.state.contactLast}
+                  phone={this.state.phone}
+                  streetAddress={this.state.streetAddress}
+                  cityStateZip={this.state.cityStateZip}
+                  email={this.state.email}
+                  password={this.state.password}
+                  isShow={this.state.isShow}
+                  // handleCreateText={this.handleCreateText}
+                />
+              </div>
             </div>
           </div>
         </div>
