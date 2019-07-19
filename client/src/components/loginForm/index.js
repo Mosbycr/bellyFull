@@ -57,7 +57,7 @@ function LogInForm(props){
                 onChange={props.handleInputChange}
                 type="email"
                 label="Email"
-                placeholder="sammyGives@gmail.com"
+                placeholder=" sammyGives@gmail.com"
               />
               <Input
                 name="loginPassword"
@@ -66,8 +66,8 @@ function LogInForm(props){
                 value={props.loginPassword}
                 onChange={props.handleInputChange}
               />
-              <p>*All fields are required</p>
-              <a href="/donations" className = "btn">
+              <p className="allFields">*All fields are required</p>
+              <a href="/donations" className ="btn" type="submit">
                 Sign In
               </a>
             </Form>
@@ -82,22 +82,22 @@ function LogInForm(props){
                 name="organization"
                 type="text"
                 label="Name of Organization"
-                placeholder="Feed The Hungry, LLC"
+                placeholder=" Feed The Hungry, LLC"
                 value={props.organization}
                 onChange={props.handleInputChange}
               />
               <Input
                 name="contactFirst"
                 type="text"
-                label="Contact Name"
-                placeholder="John"
+                label="Contact First & Last Name"
+                placeholder=" John"
                 value={props.contactFirst}
                 onChange={props.handleInputChange}
               />
               <Input
                 name="contactLast"
                 type="text"
-                placeholder="Cross"
+                placeholder=" Cross"
                 value={props.contactLast}
                 onChange={props.handleInputChange}
               />
@@ -105,7 +105,7 @@ function LogInForm(props){
                 name="phone"
                 type="text"
                 label="Phone Number"
-                placeholder="804-229-6345"
+                placeholder=" 804-229-6345"
                 value={props.phone}
                 onChange={props.handleInputChange}
               />
@@ -113,14 +113,14 @@ function LogInForm(props){
                 name="streetAddress"
                 type="text"
                 label="Address"
-                placeholder="14233 Wonder Drive"
+                placeholder=" 14233 Wonder Drive"
                 value={props.streetAddress}
                 onChange={props.handleInputChange}
               />
               <Input
                 name="cityStateZip"
                 type="text"
-                placeholder="Henrico VA, 23229"
+                placeholder=" Henrico VA, 23229"
                 value={props.cityStateZip}
                 onChange={props.handleInputChange}
               />
@@ -128,7 +128,7 @@ function LogInForm(props){
                 name="email"
                 type="email"
                 label="Email"
-                placeholder="sammyGives@gmail.com"
+                placeholder=" sammyGives@gmail.com"
                 value={props.email}
                 onChange={props.handleInputChange}
               />
@@ -139,8 +139,9 @@ function LogInForm(props){
                 value={props.password}
                 onChange={props.handleInputChange}
               />
-              <p>*All fields are required</p>
+              <p className="allFields">*All fields are required</p>
               <button
+                className="btn"
                 type="submit"
                 onClick={props.handleOrganizationFormSubmit}
               >
