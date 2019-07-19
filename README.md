@@ -20,7 +20,7 @@
 
 ![](client/src/images/homePage.png)
 
-* Non-profits have to fill our the registration form through the login/registration page before they can be redirected to the donations page where they can claim items.
+* Non-profits have to fill out the registration form through the login/registration page before they can be redirected to the donations page where they can claim items.
 
 ![](client/src/images/register.png)
 
@@ -28,7 +28,7 @@
 
 ![](client/src/images/signIn.png)
 
-* When a non-profit get redirected to the donations page, they will see available items, that they can claim. They can also see which items have been claimed.
+* When a non-profit gets redirected to the donations page, they will see available items that they can claim. They can also see which items have been claimed.
 
 ![](client/src/images/donationsPage.png)
 
