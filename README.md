@@ -1,4 +1,4 @@
-# bellyFull
+# BellyFull
 
 ## Team Members:
 * Carrie Mosby
