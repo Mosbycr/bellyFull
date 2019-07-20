@@ -53,10 +53,10 @@ function About() {
                   We seek a world of hope, tolerance and social justice, where
                   poverty has been overcome and all people live with dignity and
                   security.{" "}
+                </p>
                   <a href="/LogIn" className="btn joinUs">
                     Join Us Today
                   </a>
-                </p>
               </div>
             </div>
           </div>
