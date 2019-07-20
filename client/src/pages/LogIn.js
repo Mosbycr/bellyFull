@@ -10,7 +10,6 @@ class LogIn extends Component {
     this.state = {
       signIn: false,
       register: false,
-      isShow: false,
       loginEmail: "",
       loginPassword: "",
       organization: "",
@@ -46,8 +45,6 @@ class LogIn extends Component {
   };
 
   handleOrganizationFormSubmit = event => {
-    this.setState({ isShow: true });
-
     if (this.state.organization) {
       API.addOrganization({
         organization: this.state.organization,
@@ -97,14 +94,16 @@ class LogIn extends Component {
         </Jumbotron>
         <div className="container-fluid">
           <div className="logIn">
-            {/* <div className="row">
-              <div className="col-12"> */}
+            <div className="row">
+              <div className="col-12">
                 <LogInForm
                   signIn={this.state.signIn}
                   register={this.state.register}
                   handleSubmit={this.handleSubmit}
                   handleInputChange={this.handleInputChange}
-                  handleOrganizationFormSubmit={this.handleOrganizationFormSubmit}
+                  handleOrganizationFormSubmit={
+                    this.handleOrganizationFormSubmit
+                  }
                   loginEmail={this.state.loginEmail}
                   loginPassword={this.state.loginPassword}
                   organization={this.state.organization}
@@ -115,10 +114,9 @@ class LogIn extends Component {
                   cityStateZip={this.state.cityStateZip}
                   email={this.state.email}
                   password={this.state.password}
-                  isShow={this.state.isShow}
                 />
-              {/* </div>
-            </div> */}
+              </div>
+            </div>
           </div>
         </div>
       </div>

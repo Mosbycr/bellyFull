@@ -109,8 +109,7 @@ function LogInForm(props) {
   } else if (props.register === true) {
     return (
       <div>
-        <div className="row">
-          <div className="col-12">
+        
             <div className="formRegister">
               <Form schema={registerSchema}>
                 <Input
@@ -185,22 +184,6 @@ function LogInForm(props) {
               </Form>
             </div>
           </div>
-        </div>
-        <div className="row">
-          <div className="col-12">
-            <div>
-              {props.isShow && (
-                <h5 className="isShow text-center">
-                  Thank you for signing up. Please log in to view donations.{" "}
-                  <a className="signUp" href="/donations">
-                    click here.
-                  </a>
-                </h5>
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
     );
   } else {
     return <div />;
