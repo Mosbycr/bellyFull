@@ -56,7 +56,7 @@ function LogInForm(props) {
         loginPassword: props.loginPassword
       })
       .then(function(valid) {
-        console.log(valid);
+        props.setRedirect();
       });
   }
 
