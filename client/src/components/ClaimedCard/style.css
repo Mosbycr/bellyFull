@@ -19,6 +19,7 @@
 
 .list-group-item {
   border: 1px solid #0e3b43;
+  background-color: rgb(253, 254, 255);
 }
 
 .itemsClaimed {
@@ -27,6 +28,7 @@
 
 .card-body {
   padding: 0px;
+  background-color: rgb(253, 254, 255);
 }
 
 .address {
