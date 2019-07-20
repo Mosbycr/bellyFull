@@ -10,6 +10,7 @@ function About() {
         </div>
         <div className="row">
           <div className="col-6">
+            <div className="whoWeAre">
             <div className="row">
               <h3 className="font-weight-bold">Who we are... </h3>
             </div>
@@ -21,7 +22,9 @@ function About() {
                 </p>
               </div>
             </div>
-
+            </div>
+            
+            <div className="mission">
             <div className="row">
               <h3 className="font-weight-bold">Our Mission...</h3>
             </div>
@@ -34,6 +37,9 @@ function About() {
                 </p>
               </div>
             </div>
+            </div>
+
+            
             <div className="row">
               <h3 className="font-weight-bold">Our Vission...</h3>
             </div>
