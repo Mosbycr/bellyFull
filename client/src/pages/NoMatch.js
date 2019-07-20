@@ -1,9 +1,9 @@
 import React from "react";
-import Jumbotron from "../components/NoMatchJumbotron";
+import NoMatchJumbotron from "../components/NoMatchJumbotron";
 
 function NoMatch() {
   return (
-          <Jumbotron/>
+          <NoMatchJumbotron/>
   );
 }
 
