@@ -47,6 +47,7 @@ function LogInForm(props){
         .required("Please enter a password")
     });
 
+
     if(props.signIn === true){
         return (
           <div className="formSignIn">
@@ -74,7 +75,6 @@ function LogInForm(props){
           </div>
         );
     } else if (props.register === true){
-      // console.log(props.isShow);
         return (
           <div className="formRegister">
             <Form schema={schema}>
@@ -148,7 +148,6 @@ function LogInForm(props){
                 Register
               </button>
               <div>
-                {/* will need to add in extra check or text will show even if input is wrong */}
                 {props.isShow && (
                   <h5>
                     Thank you for signing up. Please log in to view donations.{" "}
