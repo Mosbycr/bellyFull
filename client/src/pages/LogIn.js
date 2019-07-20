@@ -20,7 +20,8 @@ class LogIn extends Component {
       cityStateZip: "",
       email: "",
       password: "",
-      organizationlogIn: []
+      organizationlogIn: [],
+      registrationMessage: false
     };
 
     this.handleSignInClick = this.handleSignInClick.bind(this);
@@ -43,6 +44,10 @@ class LogIn extends Component {
       [name]: value
     });
   };
+
+  handleRegisterMessage= () =>{
+     this.setState(prevState =>({registrationMessage:!prevState.registrationMessage}));
+  }
 
   handleOrganizationFormSubmit = event => {
     if (this.state.organization) {

@@ -58,6 +58,7 @@ function LogInForm(props) {
       .then(function(valid) {
         console.log(valid);
       });
+
   }
 
   function validateRegister() {
@@ -77,6 +78,8 @@ function LogInForm(props) {
         valid
           ? props.handleOrganizationFormSubmit()
           : console.log("not valid will not be registered");
+          props.handleRegisterMessage();
+          
       });
   }
 
