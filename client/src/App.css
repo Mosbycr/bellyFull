@@ -27,6 +27,7 @@ html, body, #root {
 }
 
 /* Home Page*/
+
 .home{
     margin-bottom: 100px;
     margin-top: 50px;
@@ -35,8 +36,8 @@ html, body, #root {
 }
 
 /* About Us Page */
+
 .about{
-    /* margin-bottom needs to be set to same height as footer to show all form info */
     margin-bottom: 100px;
     margin-top: 50px;
     margin-left: 50px;
@@ -46,25 +47,16 @@ html, body, #root {
 
 .aboutUs{
     font-weight: bold;
-    /* font-family: 'Merienda', cursive; */
-
 }
 
 .joinUs{
     font-size: 12px;
 }
 
-h3{
-    /* font-family: 'Merienda', cursive; */
-
-}
-
 
 /* LogIn */
 
 .logIn{
-    /* margin-bottom needs to be set to same height as footer to show all form info */
-    margin-bottom: 70px;
     margin-top: 50px;
     margin-left: 50px;
     margin-right: 50px;
@@ -75,7 +67,6 @@ h3{
 /* Donations */
 
 .donations{
-/* margin-bottom needs to be set to same height as footer to show all form info */
     margin-bottom: 100px;
     margin-top: 50px;
     margin-left: 50px;
