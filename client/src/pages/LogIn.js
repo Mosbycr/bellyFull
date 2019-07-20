@@ -46,7 +46,6 @@ class LogIn extends Component {
   };
 
   handleOrganizationFormSubmit = event => {
-    event.preventDefault();
     this.setState({ isShow: true });
 
     if (this.state.organization) {
@@ -98,8 +97,8 @@ class LogIn extends Component {
         </Jumbotron>
         <div className="container-fluid">
           <div className="logIn">
-            <div className="row">
-              <div className="col-12">
+            {/* <div className="row">
+              <div className="col-12"> */}
                 <LogInForm
                   signIn={this.state.signIn}
                   register={this.state.register}
@@ -118,8 +117,8 @@ class LogIn extends Component {
                   password={this.state.password}
                   isShow={this.state.isShow}
                 />
-              </div>
-            </div>
+              {/* </div>
+            </div> */}
           </div>
         </div>
       </div>
