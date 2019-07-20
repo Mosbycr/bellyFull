@@ -67,9 +67,9 @@ function LogInForm(props){
                 onChange={props.handleInputChange}
               />
               <p className="allFields">*All fields are required</p>
-              <a href="/donations" className ="btn" type="submit">
+              <button className ="btn" type="submit">
                 Sign In
-              </a>
+              </button>
             </Form>
           </div>
         );
