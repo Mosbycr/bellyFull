@@ -5,16 +5,18 @@ import * as Yup from "yup";
 
 function LogInForm(props){
 
-    const schema = Yup.object().shape({
+    const loginSchema = Yup.object().shape({
       loginEmail: Yup.string()
         .email("Please enter a valid email")
         .required("Please enter a valid email"),
       loginPassword: Yup.string()
-        .matches(
-          /^[a-zA-Z]\w{3,14}$/g,
+        .matches(/^[a-zA-Z]\w{3,14}$/, 
           "Password must start with a letter , must be between 4 and 15 characters in length, and only letters, numbers, and underscores may be used"
         )
-        .required("Please enter a password"),
+        .required("Please enter a password")
+    });
+
+    const schema = Yup.object().shape({
       organization: Yup.string().required("Organization name is required"),
       contactFirst: Yup.string().required("Contact First Name is required"),
       contactLast: Yup.string().required("Contact Last Name is required"),
@@ -47,11 +49,21 @@ function LogInForm(props){
         .required("Please enter a password")
     });
 
-
+    function validate(){
+      console.log(props)
+      loginSchema
+        .isValid({
+          loginEmail: props.loginEmail,
+          loginPassword: props.loginPassword
+        })
+        .then(function(valid) {
+          console.log(valid);
+        });
+    }
     if(props.signIn === true){
         return (
           <div className="formSignIn">
-            <Form schema={schema}>
+            <Form schema={loginSchema}>
               <Input
                 name="loginEmail"
                 value={props.loginEmail}
@@ -68,7 +80,7 @@ function LogInForm(props){
                 onChange={props.handleInputChange}
               />
               <p className="allFields">*All fields are required</p>
-              <button className ="btn" type="submit">
+              <button className ="btn" type="submit" onClick={validate}>
                 Sign In
               </button>
             </Form>

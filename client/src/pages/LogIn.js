@@ -28,6 +28,7 @@ class LogIn extends Component {
     this.handleRegisterClick = this.handleRegisterClick.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleOrganizationFormSubmit = this.handleOrganizationFormSubmit.bind(this);
+    this.handleLoginSubmit = this.handleLoginSubmit.bind(this);
   }
 
   handleSignInClick = event => {
@@ -44,6 +45,11 @@ class LogIn extends Component {
       [name]: value
     });
   };
+
+  handleLoginSubmit = event => {
+    
+  }
+
 
   handleOrganizationFormSubmit = event => {
     event.preventDefault();
