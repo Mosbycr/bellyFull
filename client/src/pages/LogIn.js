@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import Welcome from "../components/WelcomeSignIn";
 import Jumbotron from "../components/Jumbotron/Jumbotron";
 import LoginBtns from "../components/LoginBtns";
 import LogInForm from "../components/loginForm";
@@ -28,9 +27,7 @@ class LogIn extends Component {
     this.handleSignInClick = this.handleSignInClick.bind(this);
     this.handleRegisterClick = this.handleRegisterClick.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
-    this.handleOrganizationFormSubmit = this.handleOrganizationFormSubmit.bind(
-      this
-);
+    this.handleOrganizationFormSubmit = this.handleOrganizationFormSubmit.bind(this);
   }
 
   handleSignInClick = event => {
@@ -39,7 +36,6 @@ class LogIn extends Component {
 
   handleRegisterClick = event => {
     this.setState({ register: true, signIn: false });
-    // if (this.state.register:true)
   };
 
   handleInputChange = event => {
@@ -51,7 +47,6 @@ class LogIn extends Component {
 
   handleOrganizationFormSubmit = event => {
     event.preventDefault();
-    // alert("submitted");
     this.setState({ isShow: true });
 
     if (this.state.organization) {
@@ -83,8 +78,6 @@ class LogIn extends Component {
   };
 
   render() {
-    // console.log(this.state.isShow);
-
     return (
       <div>
         <Jumbotron>
@@ -112,9 +105,7 @@ class LogIn extends Component {
                   register={this.state.register}
                   handleSubmit={this.handleSubmit}
                   handleInputChange={this.handleInputChange}
-                  handleOrganizationFormSubmit={
-                    this.handleOrganizationFormSubmit
-                  }
+                  handleOrganizationFormSubmit={this.handleOrganizationFormSubmit}
                   loginEmail={this.state.loginEmail}
                   loginPassword={this.state.loginPassword}
                   organization={this.state.organization}
@@ -126,7 +117,6 @@ class LogIn extends Component {
                   email={this.state.email}
                   password={this.state.password}
                   isShow={this.state.isShow}
-                  // handleCreateText={this.handleCreateText}
                 />
               </div>
             </div>
