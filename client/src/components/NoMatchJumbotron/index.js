@@ -1,7 +1,6 @@
 import React from "react";
-// import "./style.css";
 
-function Jumbotron() {
+function NoMatchJumbotron() {
     return (
         <div className="jumbotron jumbotron-fluid d-flex align-items-center">
             <div className="container text-center">
@@ -17,4 +16,4 @@ function Jumbotron() {
     );
 }
 
-export default Jumbotron;
+export default NoMatchJumbotron;

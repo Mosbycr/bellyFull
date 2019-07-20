@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import Welcome from "../components/WelcomeSignIn";
+import { Redirect } from "react-router-dom";
 import Jumbotron from "../components/Jumbotron/Jumbotron";
 import LoginBtns from "../components/LoginBtns";
 import LogInForm from "../components/loginForm";
@@ -11,7 +11,6 @@ class LogIn extends Component {
     this.state = {
       signIn: false,
       register: false,
-      isShow: false,
       loginEmail: "",
       loginPassword: "",
       organization: "",
@@ -22,15 +21,16 @@ class LogIn extends Component {
       cityStateZip: "",
       email: "",
       password: "",
-      organizationlogIn: []
+      organizationlogIn: [],
+      redirect: false
     };
 
     this.handleSignInClick = this.handleSignInClick.bind(this);
     this.handleRegisterClick = this.handleRegisterClick.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
-    this.handleOrganizationFormSubmit = this.handleOrganizationFormSubmit.bind(
-      this
-    );
+    this.handleOrganizationFormSubmit = this.handleOrganizationFormSubmit.bind(this);
+    this.renderRedirect = this.renderRedirect.bind(this);
+    this.setRedirect = this.setRedirect.bind(this);
   }
 
   handleSignInClick = event => {
@@ -49,10 +49,6 @@ class LogIn extends Component {
   };
 
   handleOrganizationFormSubmit = event => {
-    event.preventDefault();
-    // alert("submitted");
-    this.setState({ isShow: true });
-
     if (this.state.organization) {
       API.addOrganization({
         organization: this.state.organization,
@@ -81,11 +77,20 @@ class LogIn extends Component {
     }
   };
 
-  render() {
-    // console.log(this.state.isShow);
+  setRedirect = () => {
+    this.setState({ redirect: true })
+  }
 
+  renderRedirect = () => {
+    if (this.state.redirect) {
+      return <Redirect to="/donations" />
+    }
+  }
+
+  render() {
     return (
       <div>
+        {this.renderRedirect()}
         <Jumbotron>
           <div className="signinWelcome text-center">
             <h1 className="welcomeHeader">Welcome to Bellyfull!</h1>
@@ -124,8 +129,7 @@ class LogIn extends Component {
                   cityStateZip={this.state.cityStateZip}
                   email={this.state.email}
                   password={this.state.password}
-                  isShow={this.state.isShow}
-                  // handleCreateText={this.handleCreateText}
+                  setRedirect={this.setRedirect}
                 />
               </div>
             </div>

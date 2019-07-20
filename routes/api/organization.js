@@ -8,6 +8,5 @@ router.route("/")
 router.route("/:id")
   .get(bellyFullOrganizationController.findById)
   .put(bellyFullOrganizationController.update)
-  .delete(bellyFullOrganizationController.remove);
 
 module.exports = router;

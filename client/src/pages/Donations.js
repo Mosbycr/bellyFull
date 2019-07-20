@@ -37,7 +37,6 @@ class Donations extends Component {
   };
 
   render() {
-    console.log(this.state.food);
     return (
       <div className="container-fluid">
         <div className="donations">
@@ -51,9 +50,6 @@ class Donations extends Component {
                   {this.state.food.map(food => (
                     <ListItem key={food._id}>
                       <Link to={"/food/" + food._id}>
-                        {/* <strong>
-            {food.restaurant} <br /> {food.phone}
-          </strong> */}
                       </Link>
                       <DonationsCard
                         restaurant={food.restaurant}
@@ -81,9 +77,6 @@ class Donations extends Component {
                   {this.state.food.map(food => (
                     <ListItem key={food._id}>
                       <Link to={"/food/" + food._id}>
-                        {/* <strong>
-            {food.restaurant} <br /> {food.phone}
-          </strong> */}
                       </Link>
                       <ClaimedCard
                         restaurant={food.restaurant}

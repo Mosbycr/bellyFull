@@ -10,20 +10,23 @@ function About() {
         </div>
         <div className="row">
           <div className="col-6">
+            <div className="whoWeAre">
             <div className="row">
-              <h3 className="font-weight-bold font-italic">Who we are... </h3>
+              <h3 className="font-weight-bold">Who we are... </h3>
             </div>
             <div className="row">
               <div className="col-md-10">
                 <p>
-                  Belly Full was founded in Richmond, VA by Carrie Mosby, Nimeh
+                  BellyFull was founded in Richmond, VA by Carrie Mosby, Nimeh
                   Jadallah, and Molly Levine in 2019.
                 </p>
               </div>
             </div>
-
+            </div>
+            
+            <div className="mission">
             <div className="row">
-              <h3 className="font-weight-bold font-italic">Our Mission...</h3>
+              <h3 className="font-weight-bold">Our Mission...</h3>
             </div>
             <div className="row">
               <div className="col-md-10">
@@ -34,8 +37,11 @@ function About() {
                 </p>
               </div>
             </div>
+            </div>
+
+            
             <div className="row">
-              <h3 className="font-weight-bold font-italic">Our Vission...</h3>
+              <h3 className="font-weight-bold">Our Vission...</h3>
             </div>
             <div className="row">
               <div className="col-md-10">
@@ -53,10 +59,10 @@ function About() {
                   We seek a world of hope, tolerance and social justice, where
                   poverty has been overcome and all people live with dignity and
                   security.{" "}
+                </p>
                   <a href="/LogIn" className="btn joinUs">
                     Join Us Today
                   </a>
-                </p>
               </div>
             </div>
           </div>
@@ -64,7 +70,7 @@ function About() {
           <div className="col-6">
             <div className="row">
               <div className="col-md-10">
-                <h3 className="hunger">What Hunger Looks Like in Virgina</h3>
+                <h3 className="hunger text-center">What Hunger Looks Like in Virgina</h3>
               </div>
             </div>
             <div> 
