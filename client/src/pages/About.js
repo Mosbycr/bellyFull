@@ -11,7 +11,7 @@ function About() {
         <div className="row">
           <div className="col-6">
             <div className="row">
-              <h3 className="font-weight-bold font-italic">Who we are... </h3>
+              <h3 className="font-weight-bold">Who we are... </h3>
             </div>
             <div className="row">
               <div className="col-md-10">
@@ -23,7 +23,7 @@ function About() {
             </div>
 
             <div className="row">
-              <h3 className="font-weight-bold font-italic">Our Mission...</h3>
+              <h3 className="font-weight-bold">Our Mission...</h3>
             </div>
             <div className="row">
               <div className="col-md-10">
@@ -35,7 +35,7 @@ function About() {
               </div>
             </div>
             <div className="row">
-              <h3 className="font-weight-bold font-italic">Our Vission...</h3>
+              <h3 className="font-weight-bold">Our Vission...</h3>
             </div>
             <div className="row">
               <div className="col-md-10">
@@ -64,7 +64,7 @@ function About() {
           <div className="col-6">
             <div className="row">
               <div className="col-md-10">
-                <h3 className="hunger">What Hunger Looks Like in Virgina</h3>
+                <h3 className="hunger text-center">What Hunger Looks Like in Virgina</h3>
               </div>
             </div>
             <div> 
