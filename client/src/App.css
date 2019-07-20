@@ -51,6 +51,14 @@ body,
   font-weight: bold;
 }
 
+.mission{
+  margin-bottom:20px;
+}
+
+.whoWeAre{
+  margin-bottom:20px;
+
+}
 .joinUs {
   font-size: 14px;
   width: 100px;
