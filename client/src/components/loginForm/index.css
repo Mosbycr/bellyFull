@@ -3,6 +3,7 @@ input {
     width: 400px;
     border: 1px solid #0e3b43;
     padding-top: 7px;
+    padding-left: 10px;
 }
 
 label {
