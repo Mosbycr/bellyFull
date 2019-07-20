@@ -100,7 +100,12 @@ function LogInForm(props) {
             onChange={props.handleInputChange}
           />
           <p className="allFields">*All fields are required</p>
-          <button className="btn" type="submit" onClick={validatelogIn}>
+          <button
+            className="btn"
+            type="submit"
+            onClick={validatelogIn}
+            disabled={!props.loginPassword}
+          >
             Sign In
           </button>
         </Form>
@@ -178,6 +183,7 @@ function LogInForm(props) {
                   className="btn"
                   type="submit"
                   onClick={validateRegister}
+                  disabled={!props.password}
                 >
                   Register
                 </button>
