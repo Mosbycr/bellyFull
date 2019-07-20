@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 import Jumbotron from "../components/Jumbotron/Jumbotron";
 import LoginBtns from "../components/LoginBtns";
 import LogInForm from "../components/loginForm";
@@ -20,13 +21,16 @@ class LogIn extends Component {
       cityStateZip: "",
       email: "",
       password: "",
-      organizationlogIn: []
+      organizationlogIn: [],
+      redirect: false
     };
 
     this.handleSignInClick = this.handleSignInClick.bind(this);
     this.handleRegisterClick = this.handleRegisterClick.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleOrganizationFormSubmit = this.handleOrganizationFormSubmit.bind(this);
+    this.renderRedirect = this.renderRedirect.bind(this);
+    this.setRedirect = this.setRedirect.bind(this);
   }
 
   handleSignInClick = event => {
@@ -73,9 +77,20 @@ class LogIn extends Component {
     }
   };
 
+  setRedirect = () => {
+    this.setState({ redirect: true })
+  }
+
+  renderRedirect = () => {
+    if (this.state.redirect) {
+      return <Redirect to="/donations" />
+    }
+  }
+
   render() {
     return (
       <div>
+        {this.renderRedirect()}
         <Jumbotron>
           <div className="signinWelcome text-center">
             <h1 className="welcomeHeader">Welcome to Bellyfull!</h1>
@@ -114,6 +129,7 @@ class LogIn extends Component {
                   cityStateZip={this.state.cityStateZip}
                   email={this.state.email}
                   password={this.state.password}
+                  setRedirect={this.setRedirect}
                 />
               </div>
             </div>

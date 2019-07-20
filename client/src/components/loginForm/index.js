@@ -73,10 +73,10 @@ function LogInForm(props) {
         password: props.password
       })
       .then(function(valid) {
-        console.log(valid);
-        valid
-          ? props.handleOrganizationFormSubmit()
-          : console.log("not valid will not be registered");
+        if(valid){
+          props.handleOrganizationFormSubmit();
+          props.setRedirect();
+        }
       });
   }
 
