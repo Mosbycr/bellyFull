@@ -123,9 +123,6 @@ const foodSeed = [
     claimed: false
   }
 
-
-
-
 ];
 
 db.Food

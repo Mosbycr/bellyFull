@@ -4,6 +4,7 @@ const organizationRoutes = require("./organization");
 
 //food routes
 router.use("/food", foodRoutes);
+
 //non-profit orgaization registration info routes
 router.use("/organization", organizationRoutes);
 

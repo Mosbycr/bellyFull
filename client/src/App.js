@@ -4,11 +4,10 @@ import Home from "./pages/Home";
 import Donations from "./pages/Donations";
 import LogIn from "./pages/LogIn";
 import About from "./pages/About";
+import NoMatch from "./pages/NoMatch";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-import NoMatch from "./pages/NoMatch";
 import "./App.css";
-
 
 function App() {
   return (

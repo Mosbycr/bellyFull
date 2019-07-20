@@ -47,6 +47,7 @@ function LogInForm(props){
         .required("Please enter a password")
     });
 
+
     if(props.signIn === true){
         return (
           <div className="formSignIn">
@@ -57,7 +58,7 @@ function LogInForm(props){
                 onChange={props.handleInputChange}
                 type="email"
                 label="Email"
-                placeholder=" sammyGives@gmail.com"
+                placeholder="sammyGives@gmail.com"
               />
               <Input
                 name="loginPassword"
@@ -67,14 +68,13 @@ function LogInForm(props){
                 onChange={props.handleInputChange}
               />
               <p className="allFields">*All fields are required</p>
-              <a href="/donations" className ="btn" type="submit">
+              <button className ="btn" type="submit">
                 Sign In
-              </a>
+              </button>
             </Form>
           </div>
         );
     } else if (props.register === true){
-      // console.log(props.isShow);
         return (
           <div className="formRegister">
             <Form schema={schema}>
@@ -82,7 +82,7 @@ function LogInForm(props){
                 name="organization"
                 type="text"
                 label="Name of Organization"
-                placeholder=" Feed The Hungry, LLC"
+                placeholder="Feed The Hungry, LLC"
                 value={props.organization}
                 onChange={props.handleInputChange}
               />
@@ -90,14 +90,14 @@ function LogInForm(props){
                 name="contactFirst"
                 type="text"
                 label="Contact First & Last Name"
-                placeholder=" John"
+                placeholder="John"
                 value={props.contactFirst}
                 onChange={props.handleInputChange}
               />
               <Input
                 name="contactLast"
                 type="text"
-                placeholder=" Cross"
+                placeholder="Cross"
                 value={props.contactLast}
                 onChange={props.handleInputChange}
               />
@@ -105,7 +105,7 @@ function LogInForm(props){
                 name="phone"
                 type="text"
                 label="Phone Number"
-                placeholder=" 804-229-6345"
+                placeholder="804-229-6345"
                 value={props.phone}
                 onChange={props.handleInputChange}
               />
@@ -113,14 +113,14 @@ function LogInForm(props){
                 name="streetAddress"
                 type="text"
                 label="Address"
-                placeholder=" 14233 Wonder Drive"
+                placeholder="14233 Wonder Drive"
                 value={props.streetAddress}
                 onChange={props.handleInputChange}
               />
               <Input
                 name="cityStateZip"
                 type="text"
-                placeholder=" Henrico VA, 23229"
+                placeholder="Henrico VA, 23229"
                 value={props.cityStateZip}
                 onChange={props.handleInputChange}
               />
@@ -128,7 +128,7 @@ function LogInForm(props){
                 name="email"
                 type="email"
                 label="Email"
-                placeholder=" sammyGives@gmail.com"
+                placeholder="sammyGives@gmail.com"
                 value={props.email}
                 onChange={props.handleInputChange}
               />
@@ -148,7 +148,6 @@ function LogInForm(props){
                 Register
               </button>
               <div>
-                {/* will need to add in extra check or text will show even if input is wrong */}
                 {props.isShow && (
                   <h5>
                     Thank you for signing up. Please log in to view donations.{" "}

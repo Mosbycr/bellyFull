@@ -11,6 +11,5 @@ router
 .route("/:id")
 .get(bellyFullController.findById)
 .put(bellyFullController.update)
-.delete(bellyFullController.remove)
 
 module.exports = router;

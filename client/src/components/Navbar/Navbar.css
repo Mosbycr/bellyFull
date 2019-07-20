@@ -26,19 +26,6 @@ li {
     top:2px;
 } 
 
-
-/* .navList > li > a:link, a:visited { */
-    /* display: block; */
-    /* width: 120px; */
-    /* font-weight: bold; */
-    /* text-align: center; */
-    /* padding: 4px; */
-    /* text-decoration: none; */
-    /* text-transform: uppercase; */
-    /* color: rgb(208 207 207); */
-
-/* } */
-
 .navbar-brand{
      display: block; 
     width: 120px;
