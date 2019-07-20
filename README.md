@@ -8,9 +8,10 @@
 ## Technology Used:
 * React Framework
 * Bootstrap 4
-* CSS
 * Javascript
 * MongoDB
+* Mongoose
+* Express
 * Unform
 * Yup
 
