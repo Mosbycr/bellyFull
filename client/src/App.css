@@ -20,6 +20,10 @@ html, body, #root {
     color: rgb(208 207 207);
 }
 
+.btn:focus {
+    box-shadow: none;
+}
+
 .pageContainer {
     position: relative;
     min-height: 100vh;
