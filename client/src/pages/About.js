@@ -41,7 +41,7 @@ function About() {
 
             
             <div className="row">
-              <h3 className="font-weight-bold">Our Vission...</h3>
+              <h3 className="font-weight-bold">Our Vision...</h3>
             </div>
             <div className="row">
               <div className="col-md-10">
@@ -70,7 +70,7 @@ function About() {
           <div className="col-6">
             <div className="row">
               <div className="col-md-10">
-                <h3 className="hunger text-center">What Hunger Looks Like in Virgina</h3>
+                <h3 className="hunger text-center">What Hunger Looks Like in Virginia</h3>
               </div>
             </div>
             <div> 

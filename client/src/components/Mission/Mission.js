@@ -25,7 +25,7 @@ function Mission() {
             <p className="inform">
               We understand that running a business is your first priority,
               what does this do for you? By participating in this program you
-              will be elligable for the{" "}
+              will be eligible for the{" "}
               <strong>1976 Federal Tax Law (H.R. 10612)</strong> that permits
               the deduction of the costs of producing, packaging and
               delivering products, plus up to 50 percent of the difference

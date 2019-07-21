@@ -44,7 +44,7 @@ function LogInForm(props) {
     password: Yup.string()
       .matches(
         /^[a-zA-Z]\w{3,14}$/,
-        "Password must start with a letter , must be between 4 and 15 characters in length, and only letters, numbers, and underscores may be used"
+        "Password must start with a letter, must be between 4 and 15 characters in length, and only letters, numbers, and underscores may be used"
       )
       .required("Please enter a password")
   });
