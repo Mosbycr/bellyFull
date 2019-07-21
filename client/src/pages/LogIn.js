@@ -21,13 +21,14 @@ class LogIn extends Component {
       email: "",
       password: "",
       organizationlogIn: [],
-      registrationMessage: false
+      // registrationMessage: false
     };
 
     this.handleSignInClick = this.handleSignInClick.bind(this);
     this.handleRegisterClick = this.handleRegisterClick.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleOrganizationFormSubmit = this.handleOrganizationFormSubmit.bind(this);
+    // this.handleRegisterMessage = this.handleRegisterMessage.bind(this);
   }
 
   handleSignInClick = event => {
@@ -45,9 +46,13 @@ class LogIn extends Component {
     });
   };
 
-  handleRegisterMessage= () =>{
-     this.setState(prevState =>({registrationMessage:!prevState.registrationMessage}));
-  }
+  // handleRegisterMessage=() =>{
+  //   //  this.setState({registrationMessage:true});
+  //   this.props.registrationMessage= true;
+  //    console.log(this.state.registrationMessage)
+
+  //    return <div>Thank you for signing up</div>
+  // };
 
   handleOrganizationFormSubmit = event => {
     if (this.state.organization) {
