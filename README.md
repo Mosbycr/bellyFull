@@ -1,5 +1,9 @@
 # BellyFull
 
+## Deployment
+* Checkout our Website on Heroku:
+[BellyFull](https://bellyfull-rva.herokuapp.com/)
+
 ## Team Members:
 * Carrie Mosby
 * Molly Levine
@@ -32,12 +36,6 @@
 * When a non-profit gets redirected to the donations page, they will see available items that they can claim. They can also see which items have been claimed.
 
 ![](client/src/images/donationsPage.png)
-
-
-## Deployment
-* Checkout our Website on Heroku
-[BellyFull](https://bellyfull-rva.herokuapp.com/)
-
 
 ## Special Thanks
 We would like to credit Danny Tiet. for creating a logo for our website and for allowing us to use an image taken by him for our home and logIn pages.
