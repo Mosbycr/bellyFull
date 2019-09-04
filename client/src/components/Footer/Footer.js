@@ -3,7 +3,7 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <div className="container-fluid" id="footer">
+    <div className="container-fluid sticky-bottom" id="footer">
       <div className="row">
         <div className="col-md-12 text-center">
           <div className="icons">
