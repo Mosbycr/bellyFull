@@ -3,7 +3,6 @@
 ## Deployment
 * Checkout our Website on Heroku:
 [BellyFull](https://bellyfull-rva.herokuapp.com/)
-Note: Currently migrating our db
 
 ## Team Members:
 * Carrie Mosby
